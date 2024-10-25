@@ -1,7 +1,8 @@
 // src/pages/Weekly.js
 import React from 'react';
-import { useAppContext } from '..AppContext'; // Import the context
+import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery } from '@mui/material';
+
 
 function Weekly() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access global state
@@ -13,7 +14,6 @@ function Weekly() {
 
   return (
     <>
-      <Heading /> {/* Include the Heading component */}
 
       <div>
         <h1>Welcome to the Weekly page</h1>

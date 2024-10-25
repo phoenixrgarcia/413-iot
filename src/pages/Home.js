@@ -1,6 +1,6 @@
 // src/pages/Home.js
 import React from 'react';
-import { useAppContext } from '..AppContext'; // Import the context
+import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery } from '@mui/material';
 
 function Home() {
@@ -13,7 +13,6 @@ function Home() {
 
   return (
     <>
-      <Heading /> {/* Include the Heading component */}
 
       <div>
         <h1>Welcome to the Heart Monitor App</h1>

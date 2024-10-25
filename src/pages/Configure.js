@@ -1,6 +1,6 @@
 // src/pages/Configure.js
 import React from 'react';
-import { useAppContext } from '..AppContext'; // Import the context
+import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery } from '@mui/material';
 
 function Configure() {
@@ -13,7 +13,6 @@ function Configure() {
 
   return (
     <>
-      <Heading /> {/* Include the Heading component */}
 
       <div>
         <h1>Welcome to the Configure page</h1>

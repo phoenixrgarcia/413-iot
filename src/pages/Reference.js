@@ -1,6 +1,6 @@
 // src/pages/Reference.js
 import React from 'react';
-import { useAppContext } from '..AppContext'; // Import the context
+import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery } from '@mui/material';
 
 function Reference() {
@@ -13,7 +13,6 @@ function Reference() {
 
   return (
     <>
-      <Heading /> {/* Include the Heading component */}
 
       <div>
         <h1>Welcome to the Configure page</h1>

@@ -3,7 +3,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import { Link } from 'react-router-dom';
-import { useAppContext } from '/Users/phoenixgarcia/Documents/GitHub/413-iot/src/AppContext.js'; // Import the context
+import { useAppContext } from '../AppContext'; // Import the context
 
 function Heading() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access context
