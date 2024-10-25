@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Heading from './components/Heading';
+import Home from './pages/Home';
+import Configure from './pages/Configure';
+import Daily from './pages/Daily';
+import Weekly from './pages/Weekly';
+import Reference from './pages/Reference';
+import { AppProvider } from './AppContext'; // Import AppProvider from AppContext
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider> {/* Wrap the Router in AppProvider */}
+      <Router>
+        <Heading /> {/* Render the Heading component */}
+        
+        {/* Define Routes here */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/configure" element={<Configure />} />
+          <Route path="/daily" element={<Daily />} />
+          <Route path="/weekly" element={<Weekly />} />
+          <Route path="/reference" element={<Reference />} />
+        </Routes>
+      </Router>
+    </AppProvider>
   );
 }
 
