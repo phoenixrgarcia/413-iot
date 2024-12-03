@@ -1,7 +1,8 @@
 // src/pages/Home.js
 import React from 'react';
 import { useAppContext } from '../AppContext'; // Import the context
-import { useMediaQuery } from '@mui/material';
+import { useMediaQuery, Container, Typography, Grid2, Card, CardMedia, CardContent } from '@mui/material';
+
 
 function Home() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access global state
@@ -12,30 +13,45 @@ function Home() {
   };
 
   return (
-    <>
+    <Container>
+      <Typography variant="h1" align="center" gutterBottom>
+        Welcome to Heart Monitor
+      </Typography>
+      <Typography variant="h3" gutterBottom>
+        Introduction
+      </Typography>
+      <Typography variant="body1" align="center" paragraph>
+        Heart Monitor allows you to dependably monitor your heartrate and blood oxygen levels on the go, no matter where you are. 
+        Heart Monitor accomplishes this by linking multiple heartrate and blood oxygen sensors to your account. 
+      </Typography>
 
-      <div>
-        <h1>Welcome to the Heart Monitor App</h1>
-        <p>Your health data at a glance.</p>
-        
-        {/* Display login status */}
-        <div>
-          {isLoggedIn ? (
-            <p>You are logged in.</p>
-          ) : (
-            <p>You are logged out.</p>
-          )}
-        </div>
-
-        {/* Button to toggle login/logout */}
-        <button onClick={handleLoginLogout}>
-          {isLoggedIn ? 'Log out' : 'Log in'}
-        </button>
-
-        {/* Responsive design message */}
-        {isMobile && <p>You are viewing this on a mobile device.</p>}
-      </div>
-    </>
+      <Typography variant="h3" gutterBottom>
+        Meet the Team
+      </Typography>
+      <Container maxWidth="lg" >
+        <Grid2 container spacing={4} sx={{ width: '100%', margin: 0 }} >
+          {[
+            { name: "Ishan Adhikari", email: "ishanadhikari@arizona.edu", description: "Brief summary here", img: "/resources/ishan.jpg" },
+            { name: "Phoenix Garcia", email: "garciap2@arizona.edu", description: "Brief summary here", img: "/resources/phoenix.jpg" },
+            { name: "William Rains", email: "rainsw@arizona.edu", description: "Brief summary here", img: "/resources/william.jpg" },
+          ].map((member, index) => (
+              <Card sx={{ height: '100%', width: isMobile ? '100%' : '30%'}}>
+                <CardMedia
+                  component="img"
+                  height= {isMobile ? '500' : '300'}
+                  image={member.img}
+                  alt={`${member.name}'s picture`}
+                />
+                <CardContent>
+                  <Typography variant="h5">{member.name}</Typography>
+                  <Typography variant="body2" color="textSecondary">{member.email}</Typography>
+                  <Typography variant="body1">{member.description}</Typography>
+                </CardContent>
+              </Card>
+          ))}
+        </Grid2>
+      </Container>
+    </Container>
   );
 }
 

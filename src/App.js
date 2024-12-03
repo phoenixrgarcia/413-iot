@@ -7,6 +7,7 @@ import Configure from './pages/Configure';
 import Daily from './pages/Daily';
 import Weekly from './pages/Weekly';
 import Reference from './pages/Reference';
+import Login from './pages/Login';
 import { AppProvider } from './AppContext'; // Import AppProvider from AppContext
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         {/* Define Routes here */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} /> 
           <Route path="/configure" element={<Configure />} />
           <Route path="/daily" element={<Daily />} />
           <Route path="/weekly" element={<Weekly />} />

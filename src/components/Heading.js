@@ -2,14 +2,20 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAppContext } from '../AppContext'; // Import the context
 
 function Heading() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access context
+  const navigate = useNavigate();
 
   const handleLoginLogout = () => {
-    setIsLoggedIn(!isLoggedIn); // Toggle login/logout state
+    if (isLoggedIn) {
+      setIsLoggedIn(false); // Log out
+      navigate('/'); // Redirect to home
+    } else {
+      navigate('/login'); // Redirect to login page
+    }
   };
 
   return (
