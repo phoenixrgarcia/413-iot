@@ -31,9 +31,9 @@ function Home() {
       <Container maxWidth="lg" >
         <Grid2 container spacing={4} sx={{ width: '100%', margin: 0 }} >
           {[
-            { name: "Ishan Adhikari", email: "ishanadhikari@arizona.edu", description: "Brief summary here", img: "/resources/ishan.jpg" },
-            { name: "Phoenix Garcia", email: "garciap2@arizona.edu", description: "Brief summary here", img: "/resources/phoenix.jpg" },
-            { name: "William Rains", email: "rainsw@arizona.edu", description: "Brief summary here", img: "/resources/william.jpg" },
+            { name: "Ishan Adhikari", email: "ishanadhikari@arizona.edu", description: "Electrical and Computer Engineering Senior", img: "/resources/ishan.jpg" },
+            { name: "Phoenix Garcia", email: "garciap2@arizona.edu", description: "Software Engineering Senior", img: "/resources/phoenix.jpg" },
+            { name: "William Rains", email: "rainsw@arizona.edu", description: "Software Engineering Senior", img: "/resources/william.jpg" },
           ].map((member, index) => (
               <Card sx={{ height: '100%', width: isMobile ? '100%' : '30%'}}>
                 <CardMedia
@@ -45,7 +45,7 @@ function Home() {
                 <CardContent>
                   <Typography variant="h5">{member.name}</Typography>
                   <Typography variant="body2" color="textSecondary">{member.email}</Typography>
-                  <Typography variant="body1">{member.description}</Typography>
+                  <Typography variant="body1" sx={{fontSize: 14}}>{member.description}</Typography>
                 </CardContent>
               </Card>
           ))}
