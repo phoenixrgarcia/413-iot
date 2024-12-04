@@ -10,6 +10,7 @@ import Reference from './pages/Reference';
 import Login from './pages/Login';
 import { AppProvider } from './AppContext'; // Import AppProvider from AppContext
 
+
 function App() {
   return (
     <AppProvider> {/* Wrap the Router in AppProvider */}
