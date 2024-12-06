@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 
 // Connection URI (use your Atlas URI if applicable)
 const uri = "mongodb://localhost:27017/myDatabase"; 
-console.log(mongoose);
 
 async function connectToDB() {
     try {

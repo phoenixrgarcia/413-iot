@@ -14,16 +14,7 @@ app.listen(8080, () => {
 
 
 const connectToDB = require('./db/db');
-const mongoose = require("mongoose");
-
-// Define a schema
-const UserSchema = new mongoose.Schema({
-    name: String,
-    age: Number,
-});
-
-// Create a model
-const User = mongoose.model("User", UserSchema);
+const User = require("./models/exampleSchema.js");
 
 (async () => {
     await connectToDB();
