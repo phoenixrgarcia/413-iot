@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Typography, TextField, Grid } from '@mui/material';
-import DailyChart from '../components/DailyChart';
+import MedicalChart from '../components/MedicalChart';
 
 function Daily() {
-  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().slice(0, 10));
   const [dailyData, setDailyData] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,13 @@ function Daily() {
     fetch('/resources/dummy_data/dummy_data.json')
       .then((response) => response.json())
       .then((data) => {
-        setDailyData(data);
+        const date = new Date(selectedDate);
+        const filteredData = data.filter((entry) => {
+          const entryDate = new Date(entry.time).toISOString().split('T')[0];
+          const selectedDateStr = date.toISOString().split('T')[0];
+          return entryDate === selectedDateStr;
+        });
+        setDailyData(filteredData);
       })
       .catch((error) => {
         console.error('Error loading the data:', error);
@@ -27,13 +33,13 @@ function Daily() {
     const date = new Date(dateString);
 
     // Fetch data for the selected date from your backend or JSON file
-    fetch(`/resources/heartRateData.json`)
+    fetch(`/resources/dummy_data/dummy_data.json`)
       .then((response) => response.json())
       .then((data) => {
         // Filter data for the selected date (for demonstration purposes)
         const filteredData = data.filter((entry) => {
-          const entryDate = new Date(entry.time).toLocaleDateString();
-          const selectedDateStr = date.toLocaleDateString();
+          const entryDate = new Date(entry.time).toISOString().split('T')[0];
+          const selectedDateStr = date.toISOString().split('T')[0];
           return entryDate === selectedDateStr;
         });
         setDailyData(filteredData);
@@ -47,19 +53,24 @@ function Daily() {
         Daily View:
       </Typography>
 
-          {/* Date Picker as TextField */}
-          <TextField
-            label="Date"
-            name="date"
-            type="date"
-            value={selectedDate} // Use string format 'YYYY-MM-DD'
-            onChange={handleDateChange}
-            InputLabelProps={{
-              shrink: true, // Ensure label stays above the input field
-            }}
-          />
-          
-      {dailyData.length > 0 ? <DailyChart data={dailyData} /> : <p>Loading...</p>}
+      {/* Date Picker as TextField */}
+      <TextField
+        label="Date"
+        name="date"
+        type="date"
+        value={selectedDate} // Use string format 'YYYY-MM-DD'
+        onChange={handleDateChange}
+        InputLabelProps={{
+          shrink: true, // Ensure label stays above the input field
+        }}
+      />
+
+      {dailyData.length > 0
+        ?
+        <><MedicalChart data={dailyData} dataKey="heartRate" Ylabel="Heart Rate (BPM)" stroke="#8884d8" />
+          <MedicalChart data={dailyData} dataKey="bloodOxygen" Ylabel="Oxygen Level (%)" stroke="#82ca9d" /> </>
+        :
+        <p>No data found for this date.</p>}
     </Container>
   );
 }

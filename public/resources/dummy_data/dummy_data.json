@@ -1,1 +1,902 @@
-[{"patientID":1,"heartRate":73,"bloodOxygen":95.4,"dateTime":"2024-11-19 23:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":97.9,"dateTime":"2024-11-20 00:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":97.5,"dateTime":"2024-11-20 01:26:18"},{"patientID":1,"heartRate":76,"bloodOxygen":99.2,"dateTime":"2024-11-20 02:26:18"},{"patientID":1,"heartRate":99,"bloodOxygen":97.7,"dateTime":"2024-11-20 03:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":99.6,"dateTime":"2024-11-20 04:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":96.0,"dateTime":"2024-11-20 05:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":96.1,"dateTime":"2024-11-20 06:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":95.9,"dateTime":"2024-11-20 07:26:18"},{"patientID":1,"heartRate":73,"bloodOxygen":99.6,"dateTime":"2024-11-20 08:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":97.7,"dateTime":"2024-11-20 09:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":98.2,"dateTime":"2024-11-20 10:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":98.1,"dateTime":"2024-11-20 11:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":95.8,"dateTime":"2024-11-20 12:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":98.0,"dateTime":"2024-11-20 13:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":99.4,"dateTime":"2024-11-20 14:26:18"},{"patientID":1,"heartRate":76,"bloodOxygen":99.9,"dateTime":"2024-11-20 15:26:18"},{"patientID":1,"heartRate":73,"bloodOxygen":98.4,"dateTime":"2024-11-20 16:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":100.0,"dateTime":"2024-11-20 17:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":98.5,"dateTime":"2024-11-20 18:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":98.2,"dateTime":"2024-11-20 19:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":99.9,"dateTime":"2024-11-20 20:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":95.5,"dateTime":"2024-11-20 21:26:18"},{"patientID":1,"heartRate":86,"bloodOxygen":97.2,"dateTime":"2024-11-20 22:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":98.6,"dateTime":"2024-11-20 23:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":97.4,"dateTime":"2024-11-21 00:26:18"},{"patientID":1,"heartRate":85,"bloodOxygen":96.0,"dateTime":"2024-11-21 01:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":98.7,"dateTime":"2024-11-21 02:26:18"},{"patientID":1,"heartRate":74,"bloodOxygen":98.5,"dateTime":"2024-11-21 03:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":95.3,"dateTime":"2024-11-21 04:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":95.1,"dateTime":"2024-11-21 05:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":100.0,"dateTime":"2024-11-21 06:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":99.2,"dateTime":"2024-11-21 07:26:18"},{"patientID":1,"heartRate":83,"bloodOxygen":95.5,"dateTime":"2024-11-21 08:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":97.9,"dateTime":"2024-11-21 09:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":98.7,"dateTime":"2024-11-21 10:26:18"},{"patientID":1,"heartRate":71,"bloodOxygen":95.4,"dateTime":"2024-11-21 11:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":96.0,"dateTime":"2024-11-21 12:26:18"},{"patientID":1,"heartRate":74,"bloodOxygen":95.8,"dateTime":"2024-11-21 13:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":97.3,"dateTime":"2024-11-21 14:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":96.3,"dateTime":"2024-11-21 15:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":98.0,"dateTime":"2024-11-21 16:26:18"},{"patientID":1,"heartRate":74,"bloodOxygen":96.3,"dateTime":"2024-11-21 17:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":95.2,"dateTime":"2024-11-21 18:26:18"},{"patientID":1,"heartRate":77,"bloodOxygen":98.4,"dateTime":"2024-11-21 19:26:18"},{"patientID":1,"heartRate":83,"bloodOxygen":95.2,"dateTime":"2024-11-21 20:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":97.4,"dateTime":"2024-11-21 21:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":96.8,"dateTime":"2024-11-21 22:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":99.6,"dateTime":"2024-11-21 23:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":99.0,"dateTime":"2024-11-22 00:26:18"},{"patientID":1,"heartRate":87,"bloodOxygen":95.8,"dateTime":"2024-11-22 01:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":97.9,"dateTime":"2024-11-22 02:26:18"},{"patientID":1,"heartRate":99,"bloodOxygen":100.0,"dateTime":"2024-11-22 03:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":95.3,"dateTime":"2024-11-22 04:26:18"},{"patientID":1,"heartRate":87,"bloodOxygen":99.0,"dateTime":"2024-11-22 05:26:18"},{"patientID":1,"heartRate":96,"bloodOxygen":98.2,"dateTime":"2024-11-22 06:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":98.2,"dateTime":"2024-11-22 07:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":98.0,"dateTime":"2024-11-22 08:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":96.1,"dateTime":"2024-11-22 09:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":99.3,"dateTime":"2024-11-22 10:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":97.7,"dateTime":"2024-11-22 11:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":96.8,"dateTime":"2024-11-22 12:26:18"},{"patientID":1,"heartRate":96,"bloodOxygen":98.0,"dateTime":"2024-11-22 13:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":96.6,"dateTime":"2024-11-22 14:26:18"},{"patientID":1,"heartRate":71,"bloodOxygen":96.1,"dateTime":"2024-11-22 15:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":99.8,"dateTime":"2024-11-22 16:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":99.3,"dateTime":"2024-11-22 17:26:18"},{"patientID":1,"heartRate":87,"bloodOxygen":97.3,"dateTime":"2024-11-22 18:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":95.4,"dateTime":"2024-11-22 19:26:18"},{"patientID":1,"heartRate":74,"bloodOxygen":98.8,"dateTime":"2024-11-22 20:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":98.8,"dateTime":"2024-11-22 21:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":98.3,"dateTime":"2024-11-22 22:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":95.6,"dateTime":"2024-11-22 23:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":98.6,"dateTime":"2024-11-23 00:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":97.8,"dateTime":"2024-11-23 01:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":95.5,"dateTime":"2024-11-23 02:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":96.7,"dateTime":"2024-11-23 03:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":99.8,"dateTime":"2024-11-23 04:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":99.7,"dateTime":"2024-11-23 05:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":98.0,"dateTime":"2024-11-23 06:26:18"},{"patientID":1,"heartRate":83,"bloodOxygen":97.3,"dateTime":"2024-11-23 07:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":96.9,"dateTime":"2024-11-23 08:26:18"},{"patientID":1,"heartRate":71,"bloodOxygen":96.8,"dateTime":"2024-11-23 09:26:18"},{"patientID":1,"heartRate":67,"bloodOxygen":97.1,"dateTime":"2024-11-23 10:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":96.4,"dateTime":"2024-11-23 11:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":97.1,"dateTime":"2024-11-23 12:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":96.8,"dateTime":"2024-11-23 13:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":100.0,"dateTime":"2024-11-23 14:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":96.3,"dateTime":"2024-11-23 15:26:18"},{"patientID":1,"heartRate":86,"bloodOxygen":96.7,"dateTime":"2024-11-23 16:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":96.2,"dateTime":"2024-11-23 17:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":97.6,"dateTime":"2024-11-23 18:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":96.1,"dateTime":"2024-11-23 19:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":97.2,"dateTime":"2024-11-23 20:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":98.7,"dateTime":"2024-11-23 21:26:18"},{"patientID":1,"heartRate":67,"bloodOxygen":96.2,"dateTime":"2024-11-23 22:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":99.2,"dateTime":"2024-11-23 23:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":97.0,"dateTime":"2024-11-24 00:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":98.0,"dateTime":"2024-11-24 01:26:18"},{"patientID":1,"heartRate":73,"bloodOxygen":99.2,"dateTime":"2024-11-24 02:26:18"},{"patientID":1,"heartRate":76,"bloodOxygen":95.5,"dateTime":"2024-11-24 03:26:18"},{"patientID":1,"heartRate":69,"bloodOxygen":98.4,"dateTime":"2024-11-24 04:26:18"},{"patientID":1,"heartRate":77,"bloodOxygen":97.2,"dateTime":"2024-11-24 05:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":95.2,"dateTime":"2024-11-24 06:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":95.1,"dateTime":"2024-11-24 07:26:18"},{"patientID":1,"heartRate":66,"bloodOxygen":99.2,"dateTime":"2024-11-24 08:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":97.5,"dateTime":"2024-11-24 09:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":96.8,"dateTime":"2024-11-24 10:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":99.7,"dateTime":"2024-11-24 11:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":95.1,"dateTime":"2024-11-24 12:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":98.5,"dateTime":"2024-11-24 13:26:18"},{"patientID":1,"heartRate":66,"bloodOxygen":99.2,"dateTime":"2024-11-24 14:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":99.7,"dateTime":"2024-11-24 15:26:18"},{"patientID":1,"heartRate":73,"bloodOxygen":97.3,"dateTime":"2024-11-24 16:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":96.1,"dateTime":"2024-11-24 17:26:18"},{"patientID":1,"heartRate":74,"bloodOxygen":99.2,"dateTime":"2024-11-24 18:26:18"},{"patientID":1,"heartRate":71,"bloodOxygen":96.3,"dateTime":"2024-11-24 19:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":98.0,"dateTime":"2024-11-24 20:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":97.2,"dateTime":"2024-11-24 21:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":95.1,"dateTime":"2024-11-24 22:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":99.6,"dateTime":"2024-11-24 23:26:18"},{"patientID":1,"heartRate":86,"bloodOxygen":95.9,"dateTime":"2024-11-25 00:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":98.1,"dateTime":"2024-11-25 01:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":98.9,"dateTime":"2024-11-25 02:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":100.0,"dateTime":"2024-11-25 03:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":97.4,"dateTime":"2024-11-25 04:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":99.1,"dateTime":"2024-11-25 05:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":100.0,"dateTime":"2024-11-25 06:26:18"},{"patientID":1,"heartRate":61,"bloodOxygen":99.6,"dateTime":"2024-11-25 07:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":96.1,"dateTime":"2024-11-25 08:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":96.5,"dateTime":"2024-11-25 09:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":95.1,"dateTime":"2024-11-25 10:26:18"},{"patientID":1,"heartRate":96,"bloodOxygen":98.4,"dateTime":"2024-11-25 11:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":97.0,"dateTime":"2024-11-25 12:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":95.7,"dateTime":"2024-11-25 13:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":98.8,"dateTime":"2024-11-25 14:26:18"},{"patientID":1,"heartRate":87,"bloodOxygen":97.6,"dateTime":"2024-11-25 15:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":95.3,"dateTime":"2024-11-25 16:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":98.5,"dateTime":"2024-11-25 17:26:18"},{"patientID":1,"heartRate":100,"bloodOxygen":99.6,"dateTime":"2024-11-25 18:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":97.3,"dateTime":"2024-11-25 19:26:18"},{"patientID":1,"heartRate":100,"bloodOxygen":98.5,"dateTime":"2024-11-25 20:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":99.8,"dateTime":"2024-11-25 21:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":99.7,"dateTime":"2024-11-25 22:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":95.1,"dateTime":"2024-11-25 23:26:18"},{"patientID":1,"heartRate":76,"bloodOxygen":99.3,"dateTime":"2024-11-26 00:26:18"},{"patientID":1,"heartRate":86,"bloodOxygen":98.1,"dateTime":"2024-11-26 01:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":98.4,"dateTime":"2024-11-26 02:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":98.0,"dateTime":"2024-11-26 03:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":98.0,"dateTime":"2024-11-26 04:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":99.2,"dateTime":"2024-11-26 05:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":96.0,"dateTime":"2024-11-26 06:26:18"},{"patientID":1,"heartRate":96,"bloodOxygen":96.8,"dateTime":"2024-11-26 07:26:18"},{"patientID":1,"heartRate":73,"bloodOxygen":96.4,"dateTime":"2024-11-26 08:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":95.9,"dateTime":"2024-11-26 09:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":96.9,"dateTime":"2024-11-26 10:26:18"},{"patientID":1,"heartRate":74,"bloodOxygen":97.8,"dateTime":"2024-11-26 11:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":95.2,"dateTime":"2024-11-26 12:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":96.4,"dateTime":"2024-11-26 13:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":95.2,"dateTime":"2024-11-26 14:26:18"},{"patientID":1,"heartRate":69,"bloodOxygen":99.7,"dateTime":"2024-11-26 15:26:18"},{"patientID":1,"heartRate":61,"bloodOxygen":98.8,"dateTime":"2024-11-26 16:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":97.1,"dateTime":"2024-11-26 17:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":98.2,"dateTime":"2024-11-26 18:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":97.7,"dateTime":"2024-11-26 19:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":95.5,"dateTime":"2024-11-26 20:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":97.0,"dateTime":"2024-11-26 21:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":96.0,"dateTime":"2024-11-26 22:26:18"},{"patientID":1,"heartRate":86,"bloodOxygen":99.1,"dateTime":"2024-11-26 23:26:18"},{"patientID":1,"heartRate":88,"bloodOxygen":95.1,"dateTime":"2024-11-27 00:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":95.3,"dateTime":"2024-11-27 01:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":95.4,"dateTime":"2024-11-27 02:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":98.7,"dateTime":"2024-11-27 03:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":98.6,"dateTime":"2024-11-27 04:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":100.0,"dateTime":"2024-11-27 05:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":95.4,"dateTime":"2024-11-27 06:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":98.7,"dateTime":"2024-11-27 07:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":95.3,"dateTime":"2024-11-27 08:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":95.9,"dateTime":"2024-11-27 09:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":98.6,"dateTime":"2024-11-27 10:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":96.1,"dateTime":"2024-11-27 11:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":98.5,"dateTime":"2024-11-27 12:26:18"},{"patientID":1,"heartRate":100,"bloodOxygen":99.7,"dateTime":"2024-11-27 13:26:18"},{"patientID":1,"heartRate":61,"bloodOxygen":98.3,"dateTime":"2024-11-27 14:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":97.4,"dateTime":"2024-11-27 15:26:18"},{"patientID":1,"heartRate":69,"bloodOxygen":96.4,"dateTime":"2024-11-27 16:26:18"},{"patientID":1,"heartRate":85,"bloodOxygen":99.7,"dateTime":"2024-11-27 17:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":98.8,"dateTime":"2024-11-27 18:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":98.6,"dateTime":"2024-11-27 19:26:18"},{"patientID":1,"heartRate":61,"bloodOxygen":97.5,"dateTime":"2024-11-27 20:26:18"},{"patientID":1,"heartRate":86,"bloodOxygen":95.3,"dateTime":"2024-11-27 21:26:18"},{"patientID":1,"heartRate":71,"bloodOxygen":97.2,"dateTime":"2024-11-27 22:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":99.1,"dateTime":"2024-11-27 23:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":96.4,"dateTime":"2024-11-28 00:26:18"},{"patientID":1,"heartRate":77,"bloodOxygen":97.4,"dateTime":"2024-11-28 01:26:18"},{"patientID":1,"heartRate":61,"bloodOxygen":97.0,"dateTime":"2024-11-28 02:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":97.7,"dateTime":"2024-11-28 03:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":98.3,"dateTime":"2024-11-28 04:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":97.1,"dateTime":"2024-11-28 05:26:18"},{"patientID":1,"heartRate":99,"bloodOxygen":96.4,"dateTime":"2024-11-28 06:26:18"},{"patientID":1,"heartRate":85,"bloodOxygen":99.9,"dateTime":"2024-11-28 07:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":96.2,"dateTime":"2024-11-28 08:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":97.8,"dateTime":"2024-11-28 09:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":99.0,"dateTime":"2024-11-28 10:26:18"},{"patientID":1,"heartRate":99,"bloodOxygen":97.2,"dateTime":"2024-11-28 11:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":98.2,"dateTime":"2024-11-28 12:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":96.7,"dateTime":"2024-11-28 13:26:18"},{"patientID":1,"heartRate":77,"bloodOxygen":95.4,"dateTime":"2024-11-28 14:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":97.3,"dateTime":"2024-11-28 15:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":99.5,"dateTime":"2024-11-28 16:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":99.4,"dateTime":"2024-11-28 17:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":99.1,"dateTime":"2024-11-28 18:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":97.9,"dateTime":"2024-11-28 19:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":97.9,"dateTime":"2024-11-28 20:26:18"},{"patientID":1,"heartRate":67,"bloodOxygen":95.1,"dateTime":"2024-11-28 21:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":95.8,"dateTime":"2024-11-28 22:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":99.9,"dateTime":"2024-11-28 23:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":99.1,"dateTime":"2024-11-29 00:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":98.4,"dateTime":"2024-11-29 01:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":95.4,"dateTime":"2024-11-29 02:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":96.6,"dateTime":"2024-11-29 03:26:18"},{"patientID":1,"heartRate":83,"bloodOxygen":98.7,"dateTime":"2024-11-29 04:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":95.9,"dateTime":"2024-11-29 05:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":95.4,"dateTime":"2024-11-29 06:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":96.6,"dateTime":"2024-11-29 07:26:18"},{"patientID":1,"heartRate":83,"bloodOxygen":96.2,"dateTime":"2024-11-29 08:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":95.1,"dateTime":"2024-11-29 09:26:18"},{"patientID":1,"heartRate":100,"bloodOxygen":98.6,"dateTime":"2024-11-29 10:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":95.5,"dateTime":"2024-11-29 11:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":96.7,"dateTime":"2024-11-29 12:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":98.6,"dateTime":"2024-11-29 13:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":96.4,"dateTime":"2024-11-29 14:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":98.2,"dateTime":"2024-11-29 15:26:18"},{"patientID":1,"heartRate":69,"bloodOxygen":96.3,"dateTime":"2024-11-29 16:26:18"},{"patientID":1,"heartRate":96,"bloodOxygen":99.5,"dateTime":"2024-11-29 17:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":97.7,"dateTime":"2024-11-29 18:26:18"},{"patientID":1,"heartRate":95,"bloodOxygen":97.1,"dateTime":"2024-11-29 19:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":96.0,"dateTime":"2024-11-29 20:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":95.9,"dateTime":"2024-11-29 21:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":95.8,"dateTime":"2024-11-29 22:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":98.2,"dateTime":"2024-11-29 23:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":96.6,"dateTime":"2024-11-30 00:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":95.0,"dateTime":"2024-11-30 01:26:18"},{"patientID":1,"heartRate":99,"bloodOxygen":97.1,"dateTime":"2024-11-30 02:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":97.9,"dateTime":"2024-11-30 03:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":100.0,"dateTime":"2024-11-30 04:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":98.6,"dateTime":"2024-11-30 05:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":99.3,"dateTime":"2024-11-30 06:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":96.3,"dateTime":"2024-11-30 07:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":95.0,"dateTime":"2024-11-30 08:26:18"},{"patientID":1,"heartRate":69,"bloodOxygen":99.7,"dateTime":"2024-11-30 09:26:18"},{"patientID":1,"heartRate":69,"bloodOxygen":99.7,"dateTime":"2024-11-30 10:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":99.7,"dateTime":"2024-11-30 11:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":99.9,"dateTime":"2024-11-30 12:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":98.4,"dateTime":"2024-11-30 13:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":95.8,"dateTime":"2024-11-30 14:26:18"},{"patientID":1,"heartRate":96,"bloodOxygen":99.8,"dateTime":"2024-11-30 15:26:18"},{"patientID":1,"heartRate":100,"bloodOxygen":98.2,"dateTime":"2024-11-30 16:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":95.8,"dateTime":"2024-11-30 17:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":96.5,"dateTime":"2024-11-30 18:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":98.0,"dateTime":"2024-11-30 19:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":97.5,"dateTime":"2024-11-30 20:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":97.8,"dateTime":"2024-11-30 21:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":95.5,"dateTime":"2024-11-30 22:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":99.6,"dateTime":"2024-11-30 23:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":98.6,"dateTime":"2024-12-01 00:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":98.3,"dateTime":"2024-12-01 01:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":95.3,"dateTime":"2024-12-01 02:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":99.7,"dateTime":"2024-12-01 03:26:18"},{"patientID":1,"heartRate":82,"bloodOxygen":95.8,"dateTime":"2024-12-01 04:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":99.8,"dateTime":"2024-12-01 05:26:18"},{"patientID":1,"heartRate":88,"bloodOxygen":98.9,"dateTime":"2024-12-01 06:26:18"},{"patientID":1,"heartRate":99,"bloodOxygen":97.3,"dateTime":"2024-12-01 07:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":95.9,"dateTime":"2024-12-01 08:26:18"},{"patientID":1,"heartRate":68,"bloodOxygen":98.5,"dateTime":"2024-12-01 09:26:18"},{"patientID":1,"heartRate":65,"bloodOxygen":96.3,"dateTime":"2024-12-01 10:26:18"},{"patientID":1,"heartRate":62,"bloodOxygen":99.4,"dateTime":"2024-12-01 11:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":96.9,"dateTime":"2024-12-01 12:26:18"},{"patientID":1,"heartRate":78,"bloodOxygen":99.6,"dateTime":"2024-12-01 13:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":99.4,"dateTime":"2024-12-01 14:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":96.0,"dateTime":"2024-12-01 15:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":96.7,"dateTime":"2024-12-01 16:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":95.2,"dateTime":"2024-12-01 17:26:18"},{"patientID":1,"heartRate":67,"bloodOxygen":96.2,"dateTime":"2024-12-01 18:26:18"},{"patientID":1,"heartRate":87,"bloodOxygen":96.7,"dateTime":"2024-12-01 19:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":97.6,"dateTime":"2024-12-01 20:26:18"},{"patientID":1,"heartRate":88,"bloodOxygen":96.8,"dateTime":"2024-12-01 21:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":99.0,"dateTime":"2024-12-01 22:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":98.6,"dateTime":"2024-12-01 23:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":99.2,"dateTime":"2024-12-02 00:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":98.5,"dateTime":"2024-12-02 01:26:18"},{"patientID":1,"heartRate":73,"bloodOxygen":95.2,"dateTime":"2024-12-02 02:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":99.8,"dateTime":"2024-12-02 03:26:18"},{"patientID":1,"heartRate":72,"bloodOxygen":97.0,"dateTime":"2024-12-02 04:26:18"},{"patientID":1,"heartRate":100,"bloodOxygen":98.0,"dateTime":"2024-12-02 05:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":95.8,"dateTime":"2024-12-02 06:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":96.3,"dateTime":"2024-12-02 07:26:18"},{"patientID":1,"heartRate":77,"bloodOxygen":97.1,"dateTime":"2024-12-02 08:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":98.1,"dateTime":"2024-12-02 09:26:18"},{"patientID":1,"heartRate":79,"bloodOxygen":95.6,"dateTime":"2024-12-02 10:26:18"},{"patientID":1,"heartRate":88,"bloodOxygen":96.8,"dateTime":"2024-12-02 11:26:18"},{"patientID":1,"heartRate":84,"bloodOxygen":97.3,"dateTime":"2024-12-02 12:26:18"},{"patientID":1,"heartRate":76,"bloodOxygen":97.9,"dateTime":"2024-12-02 13:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":95.1,"dateTime":"2024-12-02 14:26:18"},{"patientID":1,"heartRate":60,"bloodOxygen":97.5,"dateTime":"2024-12-02 15:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":98.3,"dateTime":"2024-12-02 16:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":99.9,"dateTime":"2024-12-02 17:26:18"},{"patientID":1,"heartRate":71,"bloodOxygen":98.4,"dateTime":"2024-12-02 18:26:18"},{"patientID":1,"heartRate":99,"bloodOxygen":98.2,"dateTime":"2024-12-02 19:26:18"},{"patientID":1,"heartRate":76,"bloodOxygen":97.7,"dateTime":"2024-12-02 20:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":97.3,"dateTime":"2024-12-02 21:26:18"},{"patientID":1,"heartRate":75,"bloodOxygen":98.0,"dateTime":"2024-12-02 22:26:18"},{"patientID":1,"heartRate":74,"bloodOxygen":95.9,"dateTime":"2024-12-02 23:26:18"},{"patientID":1,"heartRate":93,"bloodOxygen":98.7,"dateTime":"2024-12-03 00:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":99.5,"dateTime":"2024-12-03 01:26:18"},{"patientID":1,"heartRate":61,"bloodOxygen":95.6,"dateTime":"2024-12-03 02:26:18"},{"patientID":1,"heartRate":87,"bloodOxygen":95.7,"dateTime":"2024-12-03 03:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":95.0,"dateTime":"2024-12-03 04:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":99.5,"dateTime":"2024-12-03 05:26:18"},{"patientID":1,"heartRate":88,"bloodOxygen":97.9,"dateTime":"2024-12-03 06:26:18"},{"patientID":1,"heartRate":83,"bloodOxygen":98.5,"dateTime":"2024-12-03 07:26:18"},{"patientID":1,"heartRate":97,"bloodOxygen":98.7,"dateTime":"2024-12-03 08:26:18"},{"patientID":1,"heartRate":85,"bloodOxygen":99.8,"dateTime":"2024-12-03 09:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":99.6,"dateTime":"2024-12-03 10:26:18"},{"patientID":1,"heartRate":91,"bloodOxygen":97.2,"dateTime":"2024-12-03 11:26:18"},{"patientID":1,"heartRate":98,"bloodOxygen":99.8,"dateTime":"2024-12-03 12:26:18"},{"patientID":1,"heartRate":64,"bloodOxygen":96.6,"dateTime":"2024-12-03 13:26:18"},{"patientID":1,"heartRate":80,"bloodOxygen":96.0,"dateTime":"2024-12-03 14:26:18"},{"patientID":1,"heartRate":63,"bloodOxygen":97.2,"dateTime":"2024-12-03 15:26:18"},{"patientID":1,"heartRate":70,"bloodOxygen":98.2,"dateTime":"2024-12-03 16:26:18"},{"patientID":1,"heartRate":81,"bloodOxygen":97.7,"dateTime":"2024-12-03 17:26:18"},{"patientID":1,"heartRate":69,"bloodOxygen":96.9,"dateTime":"2024-12-03 18:26:18"},{"patientID":1,"heartRate":89,"bloodOxygen":98.2,"dateTime":"2024-12-03 19:26:18"},{"patientID":1,"heartRate":92,"bloodOxygen":96.3,"dateTime":"2024-12-03 20:26:18"},{"patientID":1,"heartRate":90,"bloodOxygen":97.7,"dateTime":"2024-12-03 21:26:18"},{"patientID":1,"heartRate":73,"bloodOxygen":97.5,"dateTime":"2024-12-03 22:26:18"},{"patientID":1,"heartRate":94,"bloodOxygen":96.7,"dateTime":"2024-12-03 23:26:18"}]
+[
+    {
+        "patientID": 1,
+        "heartRate": 61,
+        "bloodOxygen": 95.5,
+        "time": "2024-12-01T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 73,
+        "bloodOxygen": 98.5,
+        "time": "2024-12-01T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 92,
+        "bloodOxygen": 95.8,
+        "time": "2024-12-01T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 96.4,
+        "time": "2024-12-01T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 71,
+        "bloodOxygen": 96.5,
+        "time": "2024-12-01T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 75,
+        "bloodOxygen": 95.6,
+        "time": "2024-12-01T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 93,
+        "bloodOxygen": 99.5,
+        "time": "2024-12-01T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 91,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-01T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 67,
+        "bloodOxygen": 97.3,
+        "time": "2024-12-01T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 83,
+        "bloodOxygen": 99.8,
+        "time": "2024-12-01T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 63,
+        "bloodOxygen": 98.2,
+        "time": "2024-12-02T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 96,
+        "bloodOxygen": 95.0,
+        "time": "2024-12-02T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 72,
+        "bloodOxygen": 97.2,
+        "time": "2024-12-02T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 99.2,
+        "time": "2024-12-02T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 64,
+        "bloodOxygen": 95.0,
+        "time": "2024-12-02T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 70,
+        "bloodOxygen": 95.0,
+        "time": "2024-12-02T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 100,
+        "bloodOxygen": 95.3,
+        "time": "2024-12-02T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 78,
+        "bloodOxygen": 95.7,
+        "time": "2024-12-02T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 92,
+        "bloodOxygen": 99.3,
+        "time": "2024-12-02T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 83,
+        "bloodOxygen": 96.8,
+        "time": "2024-12-02T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 81,
+        "bloodOxygen": 99.7,
+        "time": "2024-12-03T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 92,
+        "bloodOxygen": 95.5,
+        "time": "2024-12-03T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 98,
+        "bloodOxygen": 97.0,
+        "time": "2024-12-03T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 95,
+        "bloodOxygen": 95.0,
+        "time": "2024-12-03T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 68,
+        "bloodOxygen": 96.7,
+        "time": "2024-12-03T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 96,
+        "bloodOxygen": 98.5,
+        "time": "2024-12-03T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 81,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-03T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 66,
+        "bloodOxygen": 95.7,
+        "time": "2024-12-03T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 65,
+        "bloodOxygen": 96.6,
+        "time": "2024-12-03T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 71,
+        "bloodOxygen": 97.1,
+        "time": "2024-12-03T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 65,
+        "bloodOxygen": 95.4,
+        "time": "2024-12-04T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 89,
+        "bloodOxygen": 99.8,
+        "time": "2024-12-04T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 96,
+        "bloodOxygen": 95.3,
+        "time": "2024-12-04T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 99,
+        "bloodOxygen": 95.1,
+        "time": "2024-12-04T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 94,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-04T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 85,
+        "bloodOxygen": 98.4,
+        "time": "2024-12-04T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 95.2,
+        "time": "2024-12-04T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 99,
+        "bloodOxygen": 98.1,
+        "time": "2024-12-04T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 98.6,
+        "time": "2024-12-04T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 77,
+        "bloodOxygen": 98.6,
+        "time": "2024-12-04T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 75,
+        "bloodOxygen": 99.9,
+        "time": "2024-12-05T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 75,
+        "bloodOxygen": 99.9,
+        "time": "2024-12-05T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 100,
+        "bloodOxygen": 96.2,
+        "time": "2024-12-05T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 72,
+        "bloodOxygen": 96.3,
+        "time": "2024-12-05T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 83,
+        "bloodOxygen": 95.2,
+        "time": "2024-12-05T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 85,
+        "bloodOxygen": 95.1,
+        "time": "2024-12-05T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 80,
+        "bloodOxygen": 95.1,
+        "time": "2024-12-05T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 82,
+        "bloodOxygen": 97.1,
+        "time": "2024-12-05T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 67,
+        "bloodOxygen": 98.0,
+        "time": "2024-12-05T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 87,
+        "bloodOxygen": 95.5,
+        "time": "2024-12-05T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 85,
+        "bloodOxygen": 95.6,
+        "time": "2024-12-06T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 72,
+        "bloodOxygen": 96.9,
+        "time": "2024-12-06T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 89,
+        "bloodOxygen": 95.3,
+        "time": "2024-12-06T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 84,
+        "bloodOxygen": 95.9,
+        "time": "2024-12-06T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 96,
+        "bloodOxygen": 98.1,
+        "time": "2024-12-06T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 71,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-06T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 89,
+        "bloodOxygen": 96.4,
+        "time": "2024-12-06T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 73,
+        "bloodOxygen": 98.6,
+        "time": "2024-12-06T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 68,
+        "bloodOxygen": 97.4,
+        "time": "2024-12-06T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-06T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 61,
+        "bloodOxygen": 96.5,
+        "time": "2024-12-07T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 63,
+        "bloodOxygen": 98.4,
+        "time": "2024-12-07T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 88,
+        "bloodOxygen": 96.6,
+        "time": "2024-12-07T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 74,
+        "bloodOxygen": 96.7,
+        "time": "2024-12-07T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 99,
+        "bloodOxygen": 99.2,
+        "time": "2024-12-07T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 66,
+        "bloodOxygen": 95.9,
+        "time": "2024-12-07T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 87,
+        "bloodOxygen": 97.4,
+        "time": "2024-12-07T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 95,
+        "bloodOxygen": 95.5,
+        "time": "2024-12-07T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 94,
+        "bloodOxygen": 97.1,
+        "time": "2024-12-07T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 70,
+        "bloodOxygen": 95.4,
+        "time": "2024-12-07T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 68,
+        "bloodOxygen": 98.1,
+        "time": "2024-12-08T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 66,
+        "bloodOxygen": 98.5,
+        "time": "2024-12-08T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 67,
+        "bloodOxygen": 97.1,
+        "time": "2024-12-08T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 97,
+        "bloodOxygen": 98.6,
+        "time": "2024-12-08T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 75,
+        "bloodOxygen": 96.7,
+        "time": "2024-12-08T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 99,
+        "bloodOxygen": 98.9,
+        "time": "2024-12-08T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 65,
+        "bloodOxygen": 95.8,
+        "time": "2024-12-08T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 95,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-08T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 74,
+        "bloodOxygen": 99.9,
+        "time": "2024-12-08T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 67,
+        "bloodOxygen": 95.7,
+        "time": "2024-12-08T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 83,
+        "bloodOxygen": 98.8,
+        "time": "2024-12-09T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 78,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-09T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 84,
+        "bloodOxygen": 98.0,
+        "time": "2024-12-09T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 72,
+        "bloodOxygen": 97.8,
+        "time": "2024-12-09T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 89,
+        "bloodOxygen": 99.9,
+        "time": "2024-12-09T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 75,
+        "bloodOxygen": 97.6,
+        "time": "2024-12-09T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 85,
+        "bloodOxygen": 99.2,
+        "time": "2024-12-09T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 78,
+        "bloodOxygen": 95.7,
+        "time": "2024-12-09T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-09T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 81,
+        "bloodOxygen": 95.0,
+        "time": "2024-12-09T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 89,
+        "bloodOxygen": 99.9,
+        "time": "2024-12-10T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 81,
+        "bloodOxygen": 96.1,
+        "time": "2024-12-10T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 70,
+        "bloodOxygen": 95.2,
+        "time": "2024-12-10T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 87,
+        "bloodOxygen": 99.5,
+        "time": "2024-12-10T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 63,
+        "bloodOxygen": 97.0,
+        "time": "2024-12-10T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 98,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-10T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 97.9,
+        "time": "2024-12-10T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 92,
+        "bloodOxygen": 96.6,
+        "time": "2024-12-10T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 74,
+        "bloodOxygen": 97.8,
+        "time": "2024-12-10T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 78,
+        "bloodOxygen": 96.9,
+        "time": "2024-12-10T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 65,
+        "bloodOxygen": 95.4,
+        "time": "2024-12-11T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 76,
+        "bloodOxygen": 99.9,
+        "time": "2024-12-11T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 65,
+        "bloodOxygen": 96.3,
+        "time": "2024-12-11T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 78,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-11T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 97,
+        "bloodOxygen": 98.7,
+        "time": "2024-12-11T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 92,
+        "bloodOxygen": 99.2,
+        "time": "2024-12-11T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 68,
+        "bloodOxygen": 95.2,
+        "time": "2024-12-11T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 67,
+        "bloodOxygen": 95.5,
+        "time": "2024-12-11T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 60,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-11T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 86,
+        "bloodOxygen": 96.1,
+        "time": "2024-12-11T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 95,
+        "bloodOxygen": 99.3,
+        "time": "2024-12-12T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 74,
+        "bloodOxygen": 98.6,
+        "time": "2024-12-12T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 91,
+        "bloodOxygen": 97.5,
+        "time": "2024-12-12T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 85,
+        "bloodOxygen": 96.8,
+        "time": "2024-12-12T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 67,
+        "bloodOxygen": 98.8,
+        "time": "2024-12-12T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 75,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-12T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 81,
+        "bloodOxygen": 95.7,
+        "time": "2024-12-12T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 81,
+        "bloodOxygen": 97.7,
+        "time": "2024-12-12T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 82,
+        "bloodOxygen": 96.6,
+        "time": "2024-12-12T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 74,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-12T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 84,
+        "bloodOxygen": 96.4,
+        "time": "2024-12-13T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 88,
+        "bloodOxygen": 97.4,
+        "time": "2024-12-13T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 94,
+        "bloodOxygen": 98.1,
+        "time": "2024-12-13T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 97,
+        "bloodOxygen": 95.6,
+        "time": "2024-12-13T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 70,
+        "bloodOxygen": 97.9,
+        "time": "2024-12-13T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 67,
+        "bloodOxygen": 95.2,
+        "time": "2024-12-13T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 76,
+        "bloodOxygen": 98.0,
+        "time": "2024-12-13T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 66,
+        "bloodOxygen": 95.3,
+        "time": "2024-12-13T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 94,
+        "bloodOxygen": 99.3,
+        "time": "2024-12-13T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 91,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-13T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 70,
+        "bloodOxygen": 97.3,
+        "time": "2024-12-14T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 95,
+        "bloodOxygen": 97.5,
+        "time": "2024-12-14T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 63,
+        "bloodOxygen": 98.8,
+        "time": "2024-12-14T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 84,
+        "bloodOxygen": 97.6,
+        "time": "2024-12-14T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 100,
+        "bloodOxygen": 98.2,
+        "time": "2024-12-14T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 72,
+        "bloodOxygen": 95.3,
+        "time": "2024-12-14T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 62,
+        "bloodOxygen": 97.2,
+        "time": "2024-12-14T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 71,
+        "bloodOxygen": 95.3,
+        "time": "2024-12-14T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 62,
+        "bloodOxygen": 97.8,
+        "time": "2024-12-14T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 82,
+        "bloodOxygen": 95.2,
+        "time": "2024-12-14T17:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 87,
+        "bloodOxygen": 99.2,
+        "time": "2024-12-15T08:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 82,
+        "bloodOxygen": 95.4,
+        "time": "2024-12-15T09:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 79,
+        "bloodOxygen": 95.1,
+        "time": "2024-12-15T10:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 66,
+        "bloodOxygen": 97.0,
+        "time": "2024-12-15T11:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 61,
+        "bloodOxygen": 95.5,
+        "time": "2024-12-15T12:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 65,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-15T13:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 78,
+        "bloodOxygen": 99.9,
+        "time": "2024-12-15T14:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 70,
+        "bloodOxygen": 98.7,
+        "time": "2024-12-15T15:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 84,
+        "bloodOxygen": 99.6,
+        "time": "2024-12-15T16:00:00"
+    },
+    {
+        "patientID": 1,
+        "heartRate": 87,
+        "bloodOxygen": 97.3,
+        "time": "2024-12-15T17:00:00"
+    }
+]

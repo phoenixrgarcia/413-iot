@@ -1,42 +1,82 @@
-// src/pages/Reference.js
 import React from 'react';
-import { useAppContext } from '../AppContext'; // Import the context
-import { useMediaQuery } from '@mui/material';
+import { Container, Typography, Box, List, ListItem, ListItemText } from '@mui/material';
 
-function Reference() {
-  const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access global state
-  const isMobile = useMediaQuery('(max-width:768px)'); // Check for mobile view
-
-  const handleLoginLogout = () => {
-    setIsLoggedIn(!isLoggedIn); // Toggle login state
-  };
-
+const ReferencePage = () => {
   return (
-    <>
+    <Container maxWidth="xl">
+      <Typography variant="h3" gutterBottom>
+        Project Reference Page
+      </Typography>
 
-      <div>
-        <h1>Welcome to the Configure page</h1>
-        <p>Your health data at a glance.</p>
-        
-        {/* Display login status */}
-        <div>
-          {isLoggedIn ? (
-            <p>You are logged in.</p>
-          ) : (
-            <p>You are logged out.</p>
-          )}
-        </div>
+      {/* Front End Section */}
+      <Box mb={4}>
+        <Typography variant="h4" gutterBottom>
+          Front End
+        </Typography>
 
-        {/* Button to toggle login/logout */}
-        <button onClick={handleLoginLogout}>
-          {isLoggedIn ? 'Log out' : 'Log in'}
-        </button>
+        <Typography variant="h5" gutterBottom>
+          Libraries Used
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText
+              primary="React"
+              secondary="A JavaScript library for building user interfaces. React allows for the creation of reusable components, enabling efficient and scalable front-end development."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="Material UI"
+              secondary="A popular React UI framework providing pre-built components and styles following Google’s Material Design guidelines."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="Recharts"
+              secondary="A charting library built on React components for visualizing data in an interactive and customizable way."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="Date-fns"
+              secondary="A lightweight JavaScript date utility library offering extensive date manipulation and formatting features."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="D3-array"
+              secondary="A collection of utilities for array manipulation and statistical calculations, commonly used in data visualization projects."
+            />
+          </ListItem>
+        </List>
+      </Box>
 
-        {/* Responsive design message */}
-        {isMobile && <p>You are viewing this on a mobile device.</p>}
-      </div>
-    </>
+      {/* Back End Section */}
+      <Box>
+        <Typography variant="h4" gutterBottom>
+          Back End
+        </Typography>
+
+        <Typography variant="h5" gutterBottom>
+          Libraries Used
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText
+              primary="Mongoose"
+              secondary="An Object Data Modeling (ODM) library for MongoDB and Node.js. It provides a straightforward way to model application data and includes built-in data validation and query building."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="Express"
+              secondary="A web application framework for Node.js, designed for building APIs and web applications. It simplifies server-side development by providing middleware and routing features."
+            />
+          </ListItem>
+        </List>
+      </Box>
+    </Container>
   );
-}
+};
 
-export default Reference;
+export default ReferencePage;
