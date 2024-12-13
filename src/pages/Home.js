@@ -1,8 +1,8 @@
 // src/pages/Home.js
-import React from 'react';
+import React, { useEffect } from "react";
 import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery, Container, Typography, Grid2, Card, CardMedia, CardContent } from '@mui/material';
-
+import { fetchRecords } from "../frontend";
 
 function Home() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access global state
@@ -11,6 +11,17 @@ function Home() {
   const handleLoginLogout = () => {
     setIsLoggedIn(!isLoggedIn); // Toggle login state
   };
+
+  //USE THIS FORMAT FOR BACKEND CALLS
+  useEffect(() => {
+    async function getRecords() {
+      const data = await fetchRecords();
+      console.log(data);
+    }
+
+    getRecords();
+  }, []);
+
 
   return (
     <Container>
