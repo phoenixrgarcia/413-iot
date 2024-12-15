@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery, Container, Typography, Grid2, Card, CardMedia, CardContent } from '@mui/material';
-import { fetchRecords } from "../frontend";
+import { fetchRecords, postPatient, postDevice } from "../frontend";
 
 function Home() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access global state
@@ -12,15 +12,26 @@ function Home() {
     setIsLoggedIn(!isLoggedIn); // Toggle login state
   };
 
-  //USE THIS FORMAT FOR BACKEND CALLS
-  useEffect(() => {
-    async function getRecords() {
+  //USE THIS FORMAT FOR BACKEND CALLS that happen in mounting, not all the time
+  // useEffect(() => {
+  //   async function getRecords() {
+  //     const data = await fetchRecords();
+  //     console.log(data);
+  //   }
+  // }, []);
+
+   async function getRecords() {
       const data = await fetchRecords();
       console.log(data);
     }
-
-    getRecords();
-  }, []);
+    async function xPostPatient() {
+      const data = await postPatient();
+      console.log(data);
+    }
+    async function xPostDevice() {
+      const data = await postDevice();
+      console.log(data);
+    }
 
 
   return (
@@ -28,6 +39,10 @@ function Home() {
       <Typography variant="h1" align="center" gutterBottom>
         Welcome to Heart Monitor
       </Typography>
+      <button onClick={getRecords}>Get Records</button>
+      <button onClick={xPostPatient}>Post Test Patient</button>
+      <button onClick={xPostDevice}>Post Test Device</button>
+
       <Typography variant="h3" gutterBottom>
         Introduction
       </Typography>

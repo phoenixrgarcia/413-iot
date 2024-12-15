@@ -1,6 +1,14 @@
 const express = require("express");
 const recordRoutes = express.Router();
 const connectToDB = require('./db/db');
+const Patient = require("./models/patientsSchema");
+const Device = require("./models/devicesSchema");
+
+//My thoughts, I think I setPit up in a fucked up way?? I think instead of doing .route(/...)
+//you are supposed to have a routes folder and multiple files in that folder for
+//CRUD operations. For example, there would be patients.js in this folder where I can then
+//define the CRUD operations much easier while also keeping it modularized.
+//https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get
  
 // This helps convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
@@ -10,8 +18,59 @@ const ObjectId = require("mongodb").ObjectId;
     db_connect = mongooseConnection.db; // Access the native MongoDB database object
   })();
   
+
+//PATIENT STUFF
+
+// Post new information to the database.
+recordRoutes.route("/patients").post(async function (req, res) {
+    try {
+        const newPatient = new Patient({
+            patientID: req.body.patientID,
+            email: req.body.email,
+            password: req.body.password,        
+            devices: req.body.devices || [], // Default to an empty array if devices is not provided
+        });
+
+        // Save the new patient document to the database
+        const savedPatient = await newPatient.save();
+
+        res.status(201).json(savedPatient);
+    } catch (err) {
+        console.error("Error saving the new patient:", err);
+        res.status(500).send("Error saving the new patient: " + err.message);
+    }
+});
+
+
 // This section will help you get a list of all the records.
 recordRoutes.route("/patients").get(async function (req, res) {
+    try {
+        // Fetch all patients using the Mongoose model
+        const patients = await Patient.find();
+        res.json(patients);
+      } catch (err) {
+        console.error("Error fetching records:", err);
+        res.status(500).send("Error fetching records: " + err.message);
+      }
+});
+
+// GET route to fetch devices for a specific patient by ID
+recordRoutes.route("/patients/:id").get(async function (req, res) {
+    try {
+        const id = req.params.id; // Extract the :id from the route parameter
+        const patient = await Patient.findById(id, { devices: 1, _id: 0 });
+        if (!patient) {
+            return res.status(404).send("Patient not found");
+        }
+        res.json(patient.devices); // Send only the "devices" array
+    } catch (err) {
+        console.error("Error fetching patient devices:", err);
+        res.status(500).send("Error fetching patient devices: " + err.message);
+    }
+});
+
+// Get Sensor Data for a patient ID
+recordRoutes.route("/patients/data/:id").get(async function (req, res) {
     try {
         if (!db_connect) {
             console.error("Database connection not established.");
@@ -19,7 +78,7 @@ recordRoutes.route("/patients").get(async function (req, res) {
         }
 
         // Perform the database query
-        const result = await db_connect.collection("users").find({}).toArray();
+        const result = await db_connect.collection("patients").find({}, { projection: { devices: 1, _id: 0 } }).toArray();
         res.json(result);
     } catch (err) {
         console.error("Error fetching records:", err);
@@ -28,6 +87,27 @@ recordRoutes.route("/patients").get(async function (req, res) {
 });
 
 
+//DEVICE STUFF
+
+// Post new information to the database.
+recordRoutes.route("/devices").post(async function (req, res) {
+    try {
+        const newDevice = new Device({
+            deviceId: req.body.deviceId,
+            activeRange: req.body.activeRange,
+            period: req.body.period,        
+            APIKey: req.body.apiKey,
+        });
+
+        // Save the new patient document to the database
+        const savedDevice = await newDevice.save();
+
+        res.status(201).json(savedDevice);
+    } catch (err) {
+        console.error("Error saving the new device:", err);
+        res.status(500).send("Error saving the new device: " + err.message);
+    }
+});
 
  
 // // This section will help you get a single record by id
