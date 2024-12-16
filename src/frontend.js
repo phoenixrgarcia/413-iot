@@ -76,6 +76,7 @@ export async function fetchRecords() {
             patientID: "12345",
             email: "test@example.com",
             password: "password123",
+            status: "Test",
             devices: ["Hello", "Will"],
           }),
   

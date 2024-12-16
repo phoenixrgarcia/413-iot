@@ -1,4 +1,5 @@
 const express = require("express");
+const jwt = require("jwt-simple");
 const recordRoutes = express.Router();
 const connectToDB = require('./db/db');
 const Patient = require("./models/patientsSchema");
@@ -23,15 +24,23 @@ const ObjectId = require("mongodb").ObjectId;
   })();
   
 
-//PATIENT STUFF
+//Authentication
+
+const secret = "supersecret";
 
 // Post new information to the database.
 recordRoutes.route("/patients").post(async function (req, res) {
     try {
+        // Check for email and password
+        if (!req.body.email || !req.body.password) {
+            res.status(400).json({ error: "Missing email and/or password"});
+            return;
+         }
+      
         const newPatient = new Patient({
             patientID: req.body.patientID,
             email: req.body.email,
-            password: req.body.password,        
+            password: req.body.password,    
             devices: req.body.devices || [], // Default to an empty array if devices is not provided
         });
 
@@ -45,6 +54,62 @@ recordRoutes.route("/patients").post(async function (req, res) {
     }
 });
 
+// Sends a token when given valid email/password
+recordRoutes.route("/auth").post(async function(req, res) {
+
+    if (!req.body.email || !req.body.password) {
+       res.status(401).json({ error: "Missing email and/or password"});
+       return;
+    }
+ 
+    // Get patient from the database
+    Patient.findOne({ email: req.body.email }, function(err, patient) {
+       if (err) {
+          res.status(400).send(err);
+       }
+       else if (!patient) {
+          // email not in the database
+          res.status(401).json({ error: "Bad email"});
+       }
+       else {
+          // Check if password from database matches given password
+          if (patient.password != req.body.password) {
+             res.status(401).json({ error: "Bad password"});
+          }
+          else {
+             // Send back a token that contains the patient's email
+             const token = jwt.encode({ email: patient.email }, secret);
+             res.json({ token: token });
+          }
+       }
+    });
+ });
+
+
+ // Gets the status of all users when given a valid token
+ recordRoutes.route("/status").get(async function(req, res) {
+
+    // See if the X-Auth header is set
+    if (!req.headers["x-auth"]) {
+       return res.status(401).json({error: "Missing X-Auth header"});
+    }
+ 
+    // X-Auth should contain the token 
+    const token = req.headers["x-auth"];
+    try {
+       const decoded = jwt.decode(token, secret);
+ 
+       // Send back all username and status fields
+       const patients = await Patient.find();
+       res.json(patients);
+   }
+    catch (ex) {
+       res.status(401).json({ error: "Invalid JWT" });
+    }
+ });
+ 
+ 
+//PATIENT Stuff
 
 // This is a test route to fetch all patient records
 recordRoutes.route("/patients").get(async function (req, res) {
