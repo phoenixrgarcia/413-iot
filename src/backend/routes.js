@@ -35,7 +35,6 @@ recordRoutes.route("/patients").post(async function (req, res) {
 
         // Create a new patient with the hashed password
         const newPatient = new Patient({
-            patientID: req.body.patientID,
             email: req.body.email,
             password: hashedPassword,  // Store the hashed password
             devices: req.body.devices || [],  // Default to an empty array if devices are not provided
