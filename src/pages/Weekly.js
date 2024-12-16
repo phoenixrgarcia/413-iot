@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Typography, TextField, Grid2 } from '@mui/material';
 import MedicalChart from '../components/MedicalChart';
+import { fetchSensorData } from '../frontend';
 
 function Weekly() {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
@@ -26,8 +27,7 @@ function Weekly() {
 
   useEffect(() => {
     // Fetch the JSON file from the public/resources folder
-    fetch('/resources/dummy_data/dummy_data.json')
-      .then((response) => response.json())
+    fetchSensorData(1)//  TODO: Change to Patient ID
       .then((data) => {
         const date = new Date(selectedDate);
         date.setDate(date.getDate() + 1);
