@@ -83,6 +83,7 @@ const Configure = () => {
           {/* Save Button */}
           <div>
             <button>Save Configuration</button>
+            <button>Remove Device</button>
           </div>
         </div>
       )}
@@ -108,8 +109,8 @@ const Configure = () => {
       {/* Username (disabled) */}
       <div>
         <label>
-          Username:
-          <input type="text" value="currentUsername" disabled />
+          Email:
+          <input type="text" value="currentEmail" disabled />
         </label>
       </div>
 

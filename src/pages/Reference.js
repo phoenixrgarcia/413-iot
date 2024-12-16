@@ -8,6 +8,35 @@ const ReferencePage = () => {
         Project Reference Page
       </Typography>
 
+      {/* Code Base Section */}
+      <Box mb={4}>
+        <Typography variant="h4" gutterBottom>
+          Code Base
+        </Typography>
+
+        <Typography variant="h5" gutterBottom>
+          Links
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText
+              primary="Github"
+              secondary={
+                <a 
+                  href="https://github.com/phoenixrgarcia/413-iot.git" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ color: 'inherit' }}
+                >
+                  https://github.com/phoenixrgarcia/413-iot.git
+                </a>
+              }
+            />
+          </ListItem>
+          
+        </List>
+      </Box>
+
       {/* Front End Section */}
       <Box mb={4}>
         <Typography variant="h4" gutterBottom>

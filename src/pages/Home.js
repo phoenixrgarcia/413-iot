@@ -57,9 +57,9 @@ function Home() {
       <Container maxWidth="lg" >
         <Grid2 container spacing={4} sx={{ width: '100%', margin: 0 }} >
           {[
-            { name: "Ishan Adhikari", email: "ishanadhikari@arizona.edu", description: "Electrical and Computer Engineering Senior", img: "/resources/ishan.jpg" },
-            { name: "Phoenix Garcia", email: "garciap2@arizona.edu", description: "Software Engineering Senior", img: "/resources/phoenix.jpg" },
-            { name: "William Rains", email: "rainsw@arizona.edu", description: "Software Engineering Senior", img: "/resources/william.jpg" },
+            { name: "Ishan Adhikari", email: "ishanadhikari@arizona.edu", description: "Electrical Lead", img: "/resources/ishan.jpg" },
+            { name: "Phoenix Garcia", email: "garciap2@arizona.edu", description: "Front End Lead", img: "/resources/phoenix.jpg" },
+            { name: "William Rains", email: "rainsw@arizona.edu", description: "Back End Lead", img: "/resources/william.jpg" },
           ].map((member, index) => (
               <Card sx={{ height: '100%', width: isMobile ? '100%' : '30%'}}>
                 <CardMedia
