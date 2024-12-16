@@ -6,7 +6,7 @@ const patientsSchema = new Schema({
     patientID: Number,
     email: String,
     password: String,
-    devices: [Device], //might not be correct array delcartion
+    devices: [String], //might not be correct array delcartions
 });
 const patient = model('patient', patientsSchema);
 module.exports = patient;
