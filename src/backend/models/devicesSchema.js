@@ -4,7 +4,7 @@ const { Schema, model } = mongoose;
 const devicesSchema = new Schema({
     deviceId: Number,
     activeRange: Date,
-    period: mongoose.Schema.Types.Decimal128, //This might not be correct lmao
+    period: Number, 
     APIKey: String,
 });
 const device = model('device', devicesSchema);

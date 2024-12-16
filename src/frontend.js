@@ -42,6 +42,27 @@ export async function fetchRecords() {
       console.error("Error fetching record:", error);
     }
   }
+
+  export async function fetchSensorData(id) {
+    try {
+      const response = await fetch(`http://localhost:8080/data/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log("Record:", data);
+      return data;
+    } catch (error) {
+      console.error("Error fetching record:", error);
+    }
+  }
   
 
   export async function postPatient() {
