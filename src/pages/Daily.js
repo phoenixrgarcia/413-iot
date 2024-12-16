@@ -3,7 +3,7 @@ import { Container, Typography, TextField, Grid } from '@mui/material';
 import MedicalChart from '../components/MedicalChart';
 
 function Daily() {
-  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().slice(0, 10));
+  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [dailyData, setDailyData] = useState([]);
 
   useEffect(() => {

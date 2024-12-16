@@ -8,6 +8,7 @@ import Daily from './pages/Daily';
 import Weekly from './pages/Weekly';
 import Reference from './pages/Reference';
 import Login from './pages/Login';
+import CreateAccount from './pages/CreateAccount.js';
 import { AppProvider } from './AppContext'; // Import AppProvider from AppContext
 
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} /> 
+          <Route path="/create-account" element={<CreateAccount />} /> 
           <Route path="/configure" element={<Configure />} />
           <Route path="/daily" element={<Daily />} />
           <Route path="/weekly" element={<Weekly />} />

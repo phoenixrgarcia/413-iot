@@ -1,13 +1,25 @@
 // src/components/Heading.js
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Typography, Button, Box, useMediaQuery, Menu, MenuItem, IconButton } from '@mui/material';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppContext } from '../AppContext'; // Import the context
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Heading() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access context
   const navigate = useNavigate();
+  const isMobile = useMediaQuery('(max-width:768px)'); // Check for mobile view
+  const [anchorEl, setAnchorEl] = useState(null); // State for menu anchor
+
+  // Handle opening and closing of menu
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
 
   const handleLoginLogout = () => {
     if (isLoggedIn) {
@@ -27,14 +39,35 @@ function Heading() {
           Heart Monitor
         </Typography>
 
-        {/* Navigation buttons */}
-        <Box sx={{ display: 'flex', flexGrow: 1 }}>
-          <Button color="inherit" component={Link} to="/">Home</Button>
-          <Button color="inherit" component={Link} to="/configure">Configure</Button>
-          <Button color="inherit" component={Link} to="/daily">Daily</Button>
-          <Button color="inherit" component={Link} to="/weekly">Weekly</Button>
-          <Button color="inherit" component={Link} to="/reference">Reference</Button>
-        </Box>
+        {/* Mobile Menu Button */}
+        {isMobile ? (
+          <>
+            <IconButton color="inherit" onClick={handleMenuClick}>
+              <MenuIcon />
+            </IconButton>
+
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+            >
+              <MenuItem component={Link} to="/" onClick={handleMenuClose}>Home</MenuItem>
+              <MenuItem component={Link} to="/configure" onClick={handleMenuClose}>Configure</MenuItem>
+              <MenuItem component={Link} to="/daily" onClick={handleMenuClose}>Daily</MenuItem>
+              <MenuItem component={Link} to="/weekly" onClick={handleMenuClose}>Weekly</MenuItem>
+              <MenuItem component={Link} to="/reference" onClick={handleMenuClose}>Reference</MenuItem>
+            </Menu>
+          </>
+        ) : (
+          // Desktop Navigation Buttons
+          <Box sx={{ display: 'flex', flexGrow: 1 }}>
+            <Button color="inherit" component={Link} to="/">Home</Button>
+            <Button color="inherit" component={Link} to="/configure">Configure</Button>
+            <Button color="inherit" component={Link} to="/daily">Daily</Button>
+            <Button color="inherit" component={Link} to="/weekly">Weekly</Button>
+            <Button color="inherit" component={Link} to="/reference">Reference</Button>
+          </Box>
+        )}
 
         {/* Login/Logout Button */}
         <Button color="inherit" onClick={handleLoginLogout}>

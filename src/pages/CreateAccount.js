@@ -1,20 +1,31 @@
-// src/pages/Login.js
+// src/pages/CreateAccount.js
 import React, { useState } from 'react';
-import { useAppContext } from '../AppContext'; // Import the context
-import { Container, Typography, Box, TextField, Button, Link } from '@mui/material';
-import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
+import { Container, Typography, Box, TextField, Button, Alert } from '@mui/material';
 
-function Login() {
+function CreateAccount() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Initialize navigate for routing
+  const [deviceId, setDeviceId] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add token authentication, password salting, and encryption logic here
+    setError('');
+
+    if (!isStrongPassword(password)) {
+      setError('Password must have at least 8 characters, including an uppercase, a lowercase, a digit, and a special character.');
+      return;
+    }
+
+    // Handle account creation logic (validation, API call)
+    console.log('Creating Account');
     console.log('Email:', email);
     console.log('Password:', password);
-    // Call your MongoDB API endpoint here
+  };
+
+  const isStrongPassword = (password) => {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
+    return regex.test(password);
   };
 
   return (
@@ -33,8 +44,11 @@ function Login() {
         }}
       >
         <Typography variant="h4" component="h1" gutterBottom>
-          Log In
+          Create Account
         </Typography>
+
+        {error && <Alert severity="error">{error}</Alert>}
+
         <TextField
           label="Email"
           type="email"
@@ -53,23 +67,21 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        <TextField
+          label="DeviceId"
+          type="text"
+          variant="outlined"
+          fullWidth
+          value={deviceId}
+          onChange={(e) => setDeviceId(e.target.value)}
+          required
+        />
         <Button
           type="submit"
           variant="contained"
           color="primary"
           size="large"
           fullWidth
-        >
-          Submit
-        </Button>
-
-        {/* Create Account Button */}
-        <Button
-          variant="text"
-          color="primary"
-          size="large"
-          sx={{ mt: 2 }}
-          onClick={() => navigate('/create-account')} // Navigate to the CreateAccount page
         >
           Create Account
         </Button>
@@ -78,4 +90,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default CreateAccount;
