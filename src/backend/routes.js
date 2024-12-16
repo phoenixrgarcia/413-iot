@@ -3,13 +3,17 @@ const recordRoutes = express.Router();
 const connectToDB = require('./db/db');
 const Patient = require("./models/patientsSchema");
 const Device = require("./models/devicesSchema");
+const Sensor = require("./models/sensorDataSchema");
 
-//My thoughts, I think I setPit up in a fucked up way?? I think instead of doing .route(/...)
+
+//My thoughts, I think I set it up in a fucked up way?? I think instead of doing .route(/...)
 //you are supposed to have a routes folder and multiple files in that folder for
 //CRUD operations. For example, there would be patients.js in this folder where I can then
 //define the CRUD operations much easier while also keeping it modularized.
 //https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get
  
+//MongoDB automatically adds ID section to all documents
+
 // This helps convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
  
@@ -42,7 +46,7 @@ recordRoutes.route("/patients").post(async function (req, res) {
 });
 
 
-// This section will help you get a list of all the records.
+// This is a test route to fetch all patient records
 recordRoutes.route("/patients").get(async function (req, res) {
     try {
         // Fetch all patients using the Mongoose model
@@ -69,20 +73,18 @@ recordRoutes.route("/patients/:id").get(async function (req, res) {
     }
 });
 
-// Get Sensor Data for a patient ID
-recordRoutes.route("/patients/data/:id").get(async function (req, res) {
+// Get Sensor Data for a patient ID 
+recordRoutes.route("/data/:id").get(async function (req, res) {
     try {
-        if (!db_connect) {
-            console.error("Database connection not established.");
-            return res.status(500).send("Database connection not established.");
+        const id = req.params.id; // Extract the :id from the route parameter
+        const sensorData = await Sensor.find({ patientID: id }, {_id: 0});
+        if (!sensorData) {
+            return res.status(404).send("Sensor Data not found");
         }
-
-        // Perform the database query
-        const result = await db_connect.collection("patients").find({}, { projection: { devices: 1, _id: 0 } }).toArray();
-        res.json(result);
+        res.json(sensorData); // Send only the "devices" array
     } catch (err) {
-        console.error("Error fetching records:", err);
-        res.status(500).send("Error fetching records: " + err.message);
+        console.error("Error fetching sensor data:", err);
+        res.status(500).send("Error fetching sensor data: " + err.message);
     }
 });
 
