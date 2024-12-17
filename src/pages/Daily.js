@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Container, Typography, TextField, Grid } from '@mui/material';
 import MedicalChart from '../components/MedicalChart';
 import { fetchSensorData } from '../frontend';
+import { useAppContext } from '../AppContext'; // Import the context
 
 function Daily() {
+  const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access context
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [dailyData, setDailyData] = useState([]);
 

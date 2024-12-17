@@ -24,6 +24,7 @@ function Heading() {
   const handleLoginLogout = () => {
     if (isLoggedIn) {
       setIsLoggedIn(false); // Log out
+      localStorage.removeItem("token");
       navigate('/'); // Redirect to home
     } else {
       navigate('/login'); // Redirect to login page
@@ -62,9 +63,9 @@ function Heading() {
           // Desktop Navigation Buttons
           <Box sx={{ display: 'flex', flexGrow: 1 }}>
             <Button color="inherit" component={Link} to="/">Home</Button>
-            <Button color="inherit" component={Link} to="/configure">Configure</Button>
-            <Button color="inherit" component={Link} to="/daily">Daily</Button>
-            <Button color="inherit" component={Link} to="/weekly">Weekly</Button>
+            <Button color="inherit" component={Link} to={isLoggedIn? "/configure" : "/login"}>Configure</Button>
+            <Button color="inherit" component={Link} to={isLoggedIn? "/daily" : "/login"}>Daily</Button>
+            <Button color="inherit" component={Link} to={isLoggedIn? "/weekly" : "login"}>Weekly</Button>
             <Button color="inherit" component={Link} to="/reference">Reference</Button>
           </Box>
         )}

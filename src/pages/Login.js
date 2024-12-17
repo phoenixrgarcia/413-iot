@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 import { login } from '../frontend';
 
 function Login() {
+  const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access context
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate(); // Initialize navigate for routing
@@ -13,9 +14,10 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add token authentication, password salting, and encryption logic here
-    
+
     login(email, password);
-    // Call your MongoDB API endpoint here
+    setIsLoggedIn(localStorage.getItem('token') != null);
+    navigate('/'); // Redirect to home
   };
 
   return (
