@@ -32,23 +32,21 @@ const secret = "supersecret";
 // Post new information to the database.
 recordRoutes.route("/patients").post(async function (req, res) {
     try {
+        // Create a new patient with the hashed password
+        // Check for email and password
+        if (!req.body.email || !req.body.password) {
+            res.status(400).json({ error: "Missing email and/or password" });
+            return;
+        }
+
         // Generate a salt and hash the password
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-        // Create a new patient with the hashed password
-        // Check for email and password
-        if (!req.body.email || !req.body.password) {
-            res.status(400).json({ error: "Missing email and/or password"});
-            return;
-         }
-      
         const newPatient = new Patient({
             email: req.body.email,
             password: hashedPassword,  // Store the hashed password
             devices: req.body.devices || [],  // Default to an empty array if devices are not provided
-            password: req.body.password,    
-            devices: req.body.devices || [], // Default to an empty array if devices is not provided
         });
 
         // Save the new patient document to the database
@@ -62,60 +60,59 @@ recordRoutes.route("/patients").post(async function (req, res) {
 });
 
 // Sends a token when given valid email/password
-recordRoutes.route("/auth").post(async function(req, res) {
+recordRoutes.route("/auth").post(async function (req, res) {
+    try {
+        const patient = await Patient.findOne({ email: req.body.email });
 
-    if (!req.body.email || !req.body.password) {
-       res.status(401).json({ error: "Missing email and/or password"});
-       return;
+        if (!patient) {
+            // email not found in the database
+            return res.status(401).json({ error: "Bad email" });
+        }
+
+        // Compare the provided password with the hashed password stored in the database
+        const isMatch = await bcrypt.compare(req.body.password, patient.password);
+
+        if (!isMatch) {
+            return res.status(401).json({ error: "Bad password" });
+        }
+
+        // Proceed with authentication
+        res.status(200).json({ message: "Authentication successful" });
+
+        // Generate a token containing the patient's email
+        const token = jwt.sign({ email: patient.email }, secret, { expiresIn: '1h' }); // Optional: set an expiration time for the token
+        res.json({ token: token });
+
+    } catch (err) {
+        console.error("Error during authentication:", err);
+        res.status(500).json({ error: 'Internal server error' });
     }
- 
-    // Get patient from the database
-    Patient.findOne({ email: req.body.email }, function(err, patient) {
-       if (err) {
-          res.status(400).send(err);
-       }
-       else if (!patient) {
-          // email not in the database
-          res.status(401).json({ error: "Bad email"});
-       }
-       else {
-          // Check if password from database matches given password
-          if (patient.password != req.body.password) {
-             res.status(401).json({ error: "Bad password"});
-          }
-          else {
-             // Send back a token that contains the patient's email
-             const token = jwt.encode({ email: patient.email }, secret);
-             res.json({ token: token });
-          }
-       }
-    });
- });
+});
 
 
- // Gets the status of all users when given a valid token
- recordRoutes.route("/status").get(async function(req, res) {
+// Gets the status of all users when given a valid token
+recordRoutes.route("/status").get(async function (req, res) {
 
     // See if the X-Auth header is set
     if (!req.headers["x-auth"]) {
-       return res.status(401).json({error: "Missing X-Auth header"});
+        return res.status(401).json({ error: "Missing X-Auth header" });
     }
- 
+
     // X-Auth should contain the token 
     const token = req.headers["x-auth"];
     try {
-       const decoded = jwt.decode(token, secret);
- 
-       // Send back all username and status fields
-       const patients = await Patient.find();
-       res.json(patients);
-   }
-    catch (ex) {
-       res.status(401).json({ error: "Invalid JWT" });
+        const decoded = jwt.decode(token, secret);
+
+        // Send back all username and status fields
+        const patients = await Patient.find();
+        res.json(patients);
     }
- });
- 
- 
+    catch (ex) {
+        res.status(401).json({ error: "Invalid JWT" });
+    }
+});
+
+
 //PATIENT Stuff
 
 // This is a test route to fetch all patient records

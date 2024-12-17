@@ -1,950 +1,638 @@
 [
     {
-        "patientID": 1,
-        "heartRate": 61,
-        "bloodOxygen": 95.5,
-        "time": "2024-12-01T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 73,
-        "bloodOxygen": 98.5,
-        "time": "2024-12-01T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 92,
-        "bloodOxygen": 95.8,
-        "time": "2024-12-01T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 96.4,
-        "time": "2024-12-01T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 71,
-        "bloodOxygen": 96.5,
-        "time": "2024-12-01T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 75,
-        "bloodOxygen": 95.6,
-        "time": "2024-12-01T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 93,
-        "bloodOxygen": 99.5,
-        "time": "2024-12-01T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 91,
-        "bloodOxygen": 99.0,
-        "time": "2024-12-01T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 67,
-        "bloodOxygen": 97.3,
-        "time": "2024-12-01T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 83,
-        "bloodOxygen": 99.8,
-        "time": "2024-12-01T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 63,
-        "bloodOxygen": 98.2,
-        "time": "2024-12-02T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 96,
-        "bloodOxygen": 95.0,
-        "time": "2024-12-02T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 72,
-        "bloodOxygen": 97.2,
-        "time": "2024-12-02T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 99.2,
-        "time": "2024-12-02T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 64,
-        "bloodOxygen": 95.0,
-        "time": "2024-12-02T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 70,
-        "bloodOxygen": 95.0,
-        "time": "2024-12-02T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 100,
-        "bloodOxygen": 95.3,
-        "time": "2024-12-02T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 78,
-        "bloodOxygen": 95.7,
-        "time": "2024-12-02T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 92,
-        "bloodOxygen": 99.3,
-        "time": "2024-12-02T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 83,
-        "bloodOxygen": 96.8,
-        "time": "2024-12-02T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 81,
+        "email": "test@example.com",
+        "heartRate": 97,
         "bloodOxygen": 99.7,
-        "time": "2024-12-03T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 92,
-        "bloodOxygen": 95.5,
-        "time": "2024-12-03T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 98,
-        "bloodOxygen": 97.0,
-        "time": "2024-12-03T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 95,
-        "bloodOxygen": 95.0,
-        "time": "2024-12-03T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 68,
-        "bloodOxygen": 96.7,
-        "time": "2024-12-03T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 96,
-        "bloodOxygen": 98.5,
-        "time": "2024-12-03T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 81,
-        "bloodOxygen": 96.0,
-        "time": "2024-12-03T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 66,
-        "bloodOxygen": 95.7,
-        "time": "2024-12-03T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 65,
-        "bloodOxygen": 96.6,
-        "time": "2024-12-03T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 71,
-        "bloodOxygen": 97.1,
-        "time": "2024-12-03T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 65,
-        "bloodOxygen": 95.4,
-        "time": "2024-12-04T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 89,
-        "bloodOxygen": 99.8,
-        "time": "2024-12-04T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 96,
-        "bloodOxygen": 95.3,
-        "time": "2024-12-04T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 99,
-        "bloodOxygen": 95.1,
-        "time": "2024-12-04T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 94,
-        "bloodOxygen": 96.0,
-        "time": "2024-12-04T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 85,
-        "bloodOxygen": 98.4,
-        "time": "2024-12-04T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 95.2,
-        "time": "2024-12-04T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 99,
-        "bloodOxygen": 98.1,
-        "time": "2024-12-04T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 98.6,
-        "time": "2024-12-04T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 77,
-        "bloodOxygen": 98.6,
-        "time": "2024-12-04T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 75,
-        "bloodOxygen": 99.9,
-        "time": "2024-12-05T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 75,
-        "bloodOxygen": 99.9,
-        "time": "2024-12-05T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 100,
-        "bloodOxygen": 96.2,
-        "time": "2024-12-05T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 72,
-        "bloodOxygen": 96.3,
-        "time": "2024-12-05T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 83,
-        "bloodOxygen": 95.2,
-        "time": "2024-12-05T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 85,
-        "bloodOxygen": 95.1,
-        "time": "2024-12-05T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 80,
-        "bloodOxygen": 95.1,
-        "time": "2024-12-05T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 82,
-        "bloodOxygen": 97.1,
-        "time": "2024-12-05T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 67,
-        "bloodOxygen": 98.0,
-        "time": "2024-12-05T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 87,
-        "bloodOxygen": 95.5,
-        "time": "2024-12-05T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 85,
-        "bloodOxygen": 95.6,
-        "time": "2024-12-06T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 72,
-        "bloodOxygen": 96.9,
-        "time": "2024-12-06T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 89,
-        "bloodOxygen": 95.3,
-        "time": "2024-12-06T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 84,
-        "bloodOxygen": 95.9,
-        "time": "2024-12-06T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 96,
-        "bloodOxygen": 98.1,
-        "time": "2024-12-06T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 71,
-        "bloodOxygen": 99.0,
-        "time": "2024-12-06T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 89,
-        "bloodOxygen": 96.4,
-        "time": "2024-12-06T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 73,
-        "bloodOxygen": 98.6,
-        "time": "2024-12-06T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 68,
-        "bloodOxygen": 97.4,
-        "time": "2024-12-06T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 98.3,
-        "time": "2024-12-06T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 61,
-        "bloodOxygen": 96.5,
-        "time": "2024-12-07T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 63,
-        "bloodOxygen": 98.4,
-        "time": "2024-12-07T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 88,
-        "bloodOxygen": 96.6,
-        "time": "2024-12-07T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 74,
-        "bloodOxygen": 96.7,
-        "time": "2024-12-07T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 99,
-        "bloodOxygen": 99.2,
-        "time": "2024-12-07T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 66,
-        "bloodOxygen": 95.9,
-        "time": "2024-12-07T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 87,
-        "bloodOxygen": 97.4,
-        "time": "2024-12-07T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 95,
-        "bloodOxygen": 95.5,
-        "time": "2024-12-07T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 94,
-        "bloodOxygen": 97.1,
-        "time": "2024-12-07T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 70,
-        "bloodOxygen": 95.4,
-        "time": "2024-12-07T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 68,
-        "bloodOxygen": 98.1,
-        "time": "2024-12-08T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 66,
-        "bloodOxygen": 98.5,
-        "time": "2024-12-08T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 67,
-        "bloodOxygen": 97.1,
-        "time": "2024-12-08T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 97,
-        "bloodOxygen": 98.6,
-        "time": "2024-12-08T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 75,
-        "bloodOxygen": 96.7,
-        "time": "2024-12-08T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 99,
-        "bloodOxygen": 98.9,
-        "time": "2024-12-08T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 65,
-        "bloodOxygen": 95.8,
-        "time": "2024-12-08T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 95,
-        "bloodOxygen": 99.0,
-        "time": "2024-12-08T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 74,
-        "bloodOxygen": 99.9,
-        "time": "2024-12-08T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 67,
-        "bloodOxygen": 95.7,
-        "time": "2024-12-08T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 83,
-        "bloodOxygen": 98.8,
-        "time": "2024-12-09T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 78,
-        "bloodOxygen": 99.0,
-        "time": "2024-12-09T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 84,
-        "bloodOxygen": 98.0,
-        "time": "2024-12-09T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 72,
-        "bloodOxygen": 97.8,
-        "time": "2024-12-09T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 89,
-        "bloodOxygen": 99.9,
-        "time": "2024-12-09T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 75,
-        "bloodOxygen": 97.6,
-        "time": "2024-12-09T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 85,
-        "bloodOxygen": 99.2,
-        "time": "2024-12-09T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 78,
-        "bloodOxygen": 95.7,
-        "time": "2024-12-09T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 98.3,
-        "time": "2024-12-09T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 81,
-        "bloodOxygen": 95.0,
-        "time": "2024-12-09T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 89,
-        "bloodOxygen": 99.9,
-        "time": "2024-12-10T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 81,
-        "bloodOxygen": 96.1,
-        "time": "2024-12-10T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 70,
-        "bloodOxygen": 95.2,
-        "time": "2024-12-10T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 87,
-        "bloodOxygen": 99.5,
-        "time": "2024-12-10T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 63,
-        "bloodOxygen": 97.0,
-        "time": "2024-12-10T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 98,
-        "bloodOxygen": 99.0,
-        "time": "2024-12-10T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 97.9,
-        "time": "2024-12-10T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 92,
-        "bloodOxygen": 96.6,
-        "time": "2024-12-10T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 74,
-        "bloodOxygen": 97.8,
-        "time": "2024-12-10T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 78,
-        "bloodOxygen": 96.9,
-        "time": "2024-12-10T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 65,
-        "bloodOxygen": 95.4,
-        "time": "2024-12-11T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 76,
-        "bloodOxygen": 99.9,
-        "time": "2024-12-11T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 65,
-        "bloodOxygen": 96.3,
-        "time": "2024-12-11T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 78,
-        "bloodOxygen": 99.0,
-        "time": "2024-12-11T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 97,
-        "bloodOxygen": 98.7,
-        "time": "2024-12-11T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 92,
-        "bloodOxygen": 99.2,
-        "time": "2024-12-11T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 68,
-        "bloodOxygen": 95.2,
-        "time": "2024-12-11T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 67,
-        "bloodOxygen": 95.5,
-        "time": "2024-12-11T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 60,
-        "bloodOxygen": 99.0,
-        "time": "2024-12-11T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 86,
-        "bloodOxygen": 96.1,
-        "time": "2024-12-11T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 95,
-        "bloodOxygen": 99.3,
-        "time": "2024-12-12T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 74,
-        "bloodOxygen": 98.6,
-        "time": "2024-12-12T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 91,
-        "bloodOxygen": 97.5,
-        "time": "2024-12-12T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 85,
-        "bloodOxygen": 96.8,
-        "time": "2024-12-12T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 67,
-        "bloodOxygen": 98.8,
-        "time": "2024-12-12T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 75,
-        "bloodOxygen": 98.3,
-        "time": "2024-12-12T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 81,
-        "bloodOxygen": 95.7,
-        "time": "2024-12-12T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 81,
-        "bloodOxygen": 97.7,
-        "time": "2024-12-12T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 82,
-        "bloodOxygen": 96.6,
-        "time": "2024-12-12T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 74,
-        "bloodOxygen": 96.0,
-        "time": "2024-12-12T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 84,
-        "bloodOxygen": 96.4,
-        "time": "2024-12-13T08:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 88,
-        "bloodOxygen": 97.4,
-        "time": "2024-12-13T09:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 94,
-        "bloodOxygen": 98.1,
-        "time": "2024-12-13T10:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 97,
-        "bloodOxygen": 95.6,
-        "time": "2024-12-13T11:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 70,
-        "bloodOxygen": 97.9,
-        "time": "2024-12-13T12:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 67,
-        "bloodOxygen": 95.2,
-        "time": "2024-12-13T13:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 76,
-        "bloodOxygen": 98.0,
-        "time": "2024-12-13T14:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 66,
-        "bloodOxygen": 95.3,
-        "time": "2024-12-13T15:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 94,
-        "bloodOxygen": 99.3,
-        "time": "2024-12-13T16:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 91,
-        "bloodOxygen": 98.3,
-        "time": "2024-12-13T17:00:00"
-    },
-    {
-        "patientID": 1,
-        "heartRate": 70,
-        "bloodOxygen": 97.3,
         "time": "2024-12-14T08:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 95,
-        "bloodOxygen": 97.5,
+        "email": "test@example.com",
+        "heartRate": 67,
+        "bloodOxygen": 96.8,
         "time": "2024-12-14T09:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 63,
-        "bloodOxygen": 98.8,
+        "email": "test@example.com",
+        "heartRate": 93,
+        "bloodOxygen": 95.8,
         "time": "2024-12-14T10:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 84,
-        "bloodOxygen": 97.6,
+        "email": "test@example.com",
+        "heartRate": 82,
+        "bloodOxygen": 99.9,
         "time": "2024-12-14T11:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 100,
-        "bloodOxygen": 98.2,
+        "email": "test@example.com",
+        "heartRate": 98,
+        "bloodOxygen": 95.8,
         "time": "2024-12-14T12:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 72,
-        "bloodOxygen": 95.3,
+        "email": "test@example.com",
+        "heartRate": 95,
+        "bloodOxygen": 97.1,
         "time": "2024-12-14T13:00:00"
     },
     {
-        "patientID": 1,
+        "email": "test@example.com",
         "heartRate": 62,
-        "bloodOxygen": 97.2,
+        "bloodOxygen": 96.5,
         "time": "2024-12-14T14:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 71,
-        "bloodOxygen": 95.3,
+        "email": "test@example.com",
+        "heartRate": 80,
+        "bloodOxygen": 99.3,
         "time": "2024-12-14T15:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 62,
-        "bloodOxygen": 97.8,
+        "email": "test@example.com",
+        "heartRate": 67,
+        "bloodOxygen": 96.7,
         "time": "2024-12-14T16:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 82,
+        "email": "test@example.com",
+        "heartRate": 71,
         "bloodOxygen": 95.2,
         "time": "2024-12-14T17:00:00"
     },
     {
-        "patientID": 1,
+        "email": "test@example.com",
+        "heartRate": 92,
+        "bloodOxygen": 97.3,
+        "time": "2024-12-14T18:00:00"
+    },
+    {
+        "email": "test@example.com",
         "heartRate": 87,
-        "bloodOxygen": 99.2,
+        "bloodOxygen": 98.8,
+        "time": "2024-12-14T19:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 77,
+        "bloodOxygen": 97.9,
+        "time": "2024-12-14T20:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 71,
+        "bloodOxygen": 97.3,
+        "time": "2024-12-14T21:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 96,
+        "bloodOxygen": 96.1,
+        "time": "2024-12-14T22:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 70,
+        "bloodOxygen": 97.3,
+        "time": "2024-12-14T23:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 61,
+        "bloodOxygen": 99.7,
+        "time": "2024-12-15T00:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 92,
+        "bloodOxygen": 96.4,
+        "time": "2024-12-15T01:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 70,
+        "bloodOxygen": 97.2,
+        "time": "2024-12-15T02:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 60,
+        "bloodOxygen": 97.6,
+        "time": "2024-12-15T03:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 61,
+        "bloodOxygen": 99.7,
+        "time": "2024-12-15T04:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 82,
+        "bloodOxygen": 98.0,
+        "time": "2024-12-15T05:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 90,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-15T06:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 81,
+        "bloodOxygen": 97.8,
+        "time": "2024-12-15T07:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 79,
+        "bloodOxygen": 98.2,
         "time": "2024-12-15T08:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 82,
-        "bloodOxygen": 95.4,
+        "email": "test@example.com",
+        "heartRate": 62,
+        "bloodOxygen": 98.6,
         "time": "2024-12-15T09:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 79,
-        "bloodOxygen": 95.1,
+        "email": "test@example.com",
+        "heartRate": 75,
+        "bloodOxygen": 97.9,
         "time": "2024-12-15T10:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 66,
-        "bloodOxygen": 97.0,
+        "email": "test@example.com",
+        "heartRate": 85,
+        "bloodOxygen": 97.2,
         "time": "2024-12-15T11:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 61,
-        "bloodOxygen": 95.5,
+        "email": "test@example.com",
+        "heartRate": 62,
+        "bloodOxygen": 98.4,
         "time": "2024-12-15T12:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 65,
-        "bloodOxygen": 98.3,
+        "email": "test@example.com",
+        "heartRate": 85,
+        "bloodOxygen": 95.3,
         "time": "2024-12-15T13:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 78,
-        "bloodOxygen": 99.9,
+        "email": "test@example.com",
+        "heartRate": 84,
+        "bloodOxygen": 97.7,
         "time": "2024-12-15T14:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 70,
-        "bloodOxygen": 98.7,
+        "email": "test@example.com",
+        "heartRate": 96,
+        "bloodOxygen": 96.1,
         "time": "2024-12-15T15:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 84,
-        "bloodOxygen": 99.6,
+        "email": "test@example.com",
+        "heartRate": 61,
+        "bloodOxygen": 96.6,
         "time": "2024-12-15T16:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 87,
-        "bloodOxygen": 97.3,
+        "email": "test@example.com",
+        "heartRate": 67,
+        "bloodOxygen": 99.9,
         "time": "2024-12-15T17:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 88,
+        "email": "test@example.com",
+        "heartRate": 65,
+        "bloodOxygen": 98.4,
+        "time": "2024-12-15T18:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 66,
         "bloodOxygen": 97.7,
+        "time": "2024-12-15T19:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 69,
+        "bloodOxygen": 96.8,
+        "time": "2024-12-15T20:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 60,
+        "bloodOxygen": 97.1,
+        "time": "2024-12-15T21:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 81,
+        "bloodOxygen": 99.0,
+        "time": "2024-12-15T22:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 63,
+        "bloodOxygen": 97.7,
+        "time": "2024-12-15T23:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 65,
+        "bloodOxygen": 98.1,
+        "time": "2024-12-16T00:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 77,
+        "bloodOxygen": 99.5,
+        "time": "2024-12-16T01:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 62,
+        "bloodOxygen": 98.8,
+        "time": "2024-12-16T02:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 78,
+        "bloodOxygen": 99.3,
+        "time": "2024-12-16T03:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 88,
+        "bloodOxygen": 98.6,
+        "time": "2024-12-16T04:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 92,
+        "bloodOxygen": 95.4,
+        "time": "2024-12-16T05:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 89,
+        "bloodOxygen": 97.0,
+        "time": "2024-12-16T06:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 69,
+        "bloodOxygen": 95.0,
+        "time": "2024-12-16T07:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 94,
+        "bloodOxygen": 95.7,
+        "time": "2024-12-16T08:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 72,
+        "bloodOxygen": 98.3,
         "time": "2024-12-16T09:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 100,
-        "bloodOxygen": 98.7,
+        "email": "test@example.com",
+        "heartRate": 97,
+        "bloodOxygen": 97.4,
         "time": "2024-12-16T10:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 80,
-        "bloodOxygen": 98.7,
+        "email": "test@example.com",
+        "heartRate": 95,
+        "bloodOxygen": 96.9,
         "time": "2024-12-16T11:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 71,
-        "bloodOxygen": 98.1,
+        "email": "test@example.com",
+        "heartRate": 74,
+        "bloodOxygen": 96.3,
         "time": "2024-12-16T12:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 70,
-        "bloodOxygen": 96.9,
+        "email": "test@example.com",
+        "heartRate": 91,
+        "bloodOxygen": 95.6,
         "time": "2024-12-16T13:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 63,
-        "bloodOxygen": 95.5,
+        "email": "test@example.com",
+        "heartRate": 76,
+        "bloodOxygen": 95.0,
         "time": "2024-12-16T14:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 96,
-        "bloodOxygen": 97.0,
+        "email": "test@example.com",
+        "heartRate": 72,
+        "bloodOxygen": 96.0,
         "time": "2024-12-16T15:00:00"
     },
     {
-        "patientID": 1,
-        "heartRate": 63,
-        "bloodOxygen": 98.8,
+        "email": "test@example.com",
+        "heartRate": 65,
+        "bloodOxygen": 95.8,
         "time": "2024-12-16T16:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 78,
+        "bloodOxygen": 95.2,
+        "time": "2024-12-16T17:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 71,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-16T18:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 92,
+        "bloodOxygen": 98.4,
+        "time": "2024-12-16T19:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 70,
+        "bloodOxygen": 99.5,
+        "time": "2024-12-16T20:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 88,
+        "bloodOxygen": 98.8,
+        "time": "2024-12-16T21:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 69,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-16T22:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 90,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-16T23:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 62,
+        "bloodOxygen": 96.6,
+        "time": "2024-12-17T00:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 96,
+        "bloodOxygen": 97.6,
+        "time": "2024-12-17T01:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 74,
+        "bloodOxygen": 98.8,
+        "time": "2024-12-17T02:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 73,
+        "bloodOxygen": 99.6,
+        "time": "2024-12-17T03:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 95,
+        "bloodOxygen": 98.7,
+        "time": "2024-12-17T04:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 68,
+        "bloodOxygen": 95.4,
+        "time": "2024-12-17T05:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 97,
+        "bloodOxygen": 96.5,
+        "time": "2024-12-17T06:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 63,
+        "bloodOxygen": 95.9,
+        "time": "2024-12-17T07:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 80,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-17T08:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 91,
+        "bloodOxygen": 95.1,
+        "time": "2024-12-17T09:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 79,
+        "bloodOxygen": 98.3,
+        "time": "2024-12-17T10:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 96,
+        "bloodOxygen": 99.7,
+        "time": "2024-12-17T11:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 73,
+        "bloodOxygen": 96.6,
+        "time": "2024-12-17T12:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 95,
+        "bloodOxygen": 95.7,
+        "time": "2024-12-17T13:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 82,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-17T14:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 94,
+        "bloodOxygen": 98.9,
+        "time": "2024-12-17T15:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 98,
+        "bloodOxygen": 96.8,
+        "time": "2024-12-17T16:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 84,
+        "bloodOxygen": 99.3,
+        "time": "2024-12-17T17:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 68,
+        "bloodOxygen": 97.1,
+        "time": "2024-12-17T18:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 97,
+        "bloodOxygen": 98.6,
+        "time": "2024-12-17T19:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 66,
+        "bloodOxygen": 95.1,
+        "time": "2024-12-17T20:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 67,
+        "bloodOxygen": 98.1,
+        "time": "2024-12-17T21:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 81,
+        "bloodOxygen": 99.3,
+        "time": "2024-12-17T22:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 80,
+        "bloodOxygen": 97.9,
+        "time": "2024-12-17T23:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 89,
+        "bloodOxygen": 95.8,
+        "time": "2024-12-18T00:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 98,
+        "bloodOxygen": 98.2,
+        "time": "2024-12-18T01:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 96,
+        "bloodOxygen": 98.5,
+        "time": "2024-12-18T02:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 97,
+        "bloodOxygen": 97.3,
+        "time": "2024-12-18T03:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 99,
+        "bloodOxygen": 99.7,
+        "time": "2024-12-18T04:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 69,
+        "bloodOxygen": 99.4,
+        "time": "2024-12-18T05:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 91,
+        "bloodOxygen": 96.4,
+        "time": "2024-12-18T06:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 72,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-18T07:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 87,
+        "bloodOxygen": 97.8,
+        "time": "2024-12-18T08:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 77,
+        "bloodOxygen": 96.4,
+        "time": "2024-12-18T09:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 89,
+        "bloodOxygen": 96.8,
+        "time": "2024-12-18T10:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 64,
+        "bloodOxygen": 97.4,
+        "time": "2024-12-18T11:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 71,
+        "bloodOxygen": 96.0,
+        "time": "2024-12-18T12:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 98,
+        "bloodOxygen": 96.8,
+        "time": "2024-12-18T13:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 89,
+        "bloodOxygen": 98.0,
+        "time": "2024-12-18T14:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 63,
+        "bloodOxygen": 96.1,
+        "time": "2024-12-18T15:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 100,
+        "bloodOxygen": 98.5,
+        "time": "2024-12-18T16:00:00"
+    },
+    {
+        "email": "test@example.com",
+        "heartRate": 64,
+        "bloodOxygen": 97.5,
+        "time": "2024-12-18T17:00:00"
     }
 ]

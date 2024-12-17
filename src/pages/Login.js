@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useAppContext } from '../AppContext'; // Import the context
 import { Container, Typography, Box, TextField, Button, Link } from '@mui/material';
 import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
+import { login } from '../frontend';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -12,8 +13,8 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add token authentication, password salting, and encryption logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    
+    login(email, password)
     // Call your MongoDB API endpoint here
   };
 
