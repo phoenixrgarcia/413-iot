@@ -5,7 +5,6 @@ const Device = require("./devicesSchema.js")
 const patientsSchema = new Schema({
     email: String,
     password: String,
-    status: String,
     devices: [String], //might not be correct array delcartions
 });
 const patient = model('patient', patientsSchema);

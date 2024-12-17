@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchDevice, fetchPatient } from "../frontend";
+import { fetchDevice, fetchPatient, updatePatient } from "../frontend";
 
 const Configure = () => {
 
@@ -13,6 +13,28 @@ const Configure = () => {
   const [startMinute, setStartMinute] = useState('');
   const [endHour, setEndHour] = useState('');
   const [endMinute, setEndMinute] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+
+
+  const handleSavePassword = async () => {
+    try {
+      if (!patient) {
+        console.error("No patient data available.");
+        return;
+      }
+  
+      const updatedData = { password: newPassword }; // Only updating the password
+      const response = await updatePatient(patient.email, updatedData);
+  
+      console.log("Password updated successfully:", response);
+      alert("Password updated successfully!");
+    } catch (error) {
+      console.error("Error updating password:", error);
+      alert("Failed to update password.");
+    }
+  };
+  
+
 
   useEffect(() => {
     async function fetchData() {
@@ -155,26 +177,23 @@ const Configure = () => {
         </label>
       </div>
 
-      {/* Current Password */}
-      <div>
-        <label>
-          Current Password:
-          <input type="password" />
-        </label>
-      </div>
-
       {/* New Password */}
       <div>
         <label>
           New Password:
-          <input type="password" />
+          <input
+            type="password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)} // Update state on change
+          />
         </label>
       </div>
 
       {/* Save Button */}
       <div>
-        <button>Submit Changes</button>
-      </div>
+        <button onClick={handleSavePassword}>Submit Changes</button>
+    </div>
+
 
 
     </div>

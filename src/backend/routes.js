@@ -50,6 +50,40 @@ recordRoutes.route("/patients").post(async function (req, res) {
     }
 });
 
+// Update patient information by email
+recordRoutes.route("/patients/:email").put(async function (req, res) {
+    try {
+        const email = req.params.email;
+
+        // Check if email is provided
+        if (!email) {
+            return res.status(400).json({ error: "Missing email parameter" });
+        }
+
+        // Build update object dynamically
+        const updateData = {};
+        if (req.body.password) updateData.password = req.body.password; // Note: No hashing for simplicity
+        if (req.body.devices) updateData.devices = req.body.devices;
+
+        // Find patient by email and update
+        const updatedPatient = await Patient.findOneAndUpdate(
+            { email: email }, // Filter by email
+            { $set: updateData }, // Fields to update
+            { new: true, runValidators: true } // Options: Return updated document and validate
+        );
+
+        if (!updatedPatient) {
+            return res.status(404).json({ error: "Patient not found" });
+        }
+
+        // Send updated document as response
+        res.status(200).json(updatedPatient);
+    } catch (err) {
+        console.error("Error updating the patient:", err);
+        res.status(500).json({ error: "Error updating the patient: " + err.message });
+    }
+});
+
 // Sends a token when given valid email/password
 recordRoutes.route("/auth").post(async function (req, res) {
     try {
@@ -199,6 +233,8 @@ recordRoutes.route("/devices/:id").get(async function (req, res) {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+
 
 // // This section will help you get a single record by id
 // recordRoutes.route("/patients/:id").get(function (req, res) {

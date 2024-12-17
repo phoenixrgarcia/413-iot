@@ -167,4 +167,25 @@ export async function testys() {
   }
 }
 
-
+export async function updatePatient(patientID, updatedData) {
+    try {
+      const response = await fetch(`http://localhost:8080/patients/${patientID}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedData), // Dynamically send updated fields
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log("Patient updated successfully:", data);
+      return data; // Return the updated data
+    } catch (error) {
+      console.error("Error updating patient:", error);
+    }
+  }
+  
