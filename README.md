@@ -1,21 +1,32 @@
-413 Heart Monitoring Project
-by William Rains, Ishan Adhikari, and Phoenix Garcia
+Here is the **entire `README.md`** file **completely formatted in raw Markdown**, ready to be copied and pasted into a file. This includes **code blocks, headings, links, and file structures** all properly written in Markdown.
 
-Project Overview
-The goal of this project was to create a fully functional Heart Monitoring System. Users can measure their heart rate and blood oxygen saturation using a physical device. The recorded data is sent to the Particle platform, which then triggers a webhook to send data to our MongoDB backend. The backend, built using Express, exposes multiple endpoints to interact with the data.
+---
 
-The project includes a user-friendly web application built using Node.js and React. Users can:
+```markdown
+# **413 Heart Monitoring Project**  
+**By William Rains, Ishan Adhikari, and Phoenix Garcia**  
 
-Sign in securely.
-Access daily and weekly data.
-Configure settings for their Particle device.
-Add new devices.
-Update their password.
-File Hierarchy
+---
+
+## **Project Overview**  
+The goal of this project was to create a fully functional **Heart Monitoring System**.  
+
+- Users can measure their **heart rate** and **blood oxygen saturation** using a physical device.  
+- The recorded data is sent to the **Particle platform**, which triggers a **webhook** to forward data to our MongoDB backend.  
+- The backend exposes multiple endpoints using **Express** to interact with the data.  
+- The frontend is a **React** web application that allows users to:  
+   - Sign in securely.  
+   - View **daily** and **weekly** heart rate and blood oxygen data.  
+   - Configure Particle device settings.  
+   - Add new devices.  
+   - Update their account password.
+
+---
+
+## **File Hierarchy**  
 Here is the high-level structure of the project files:
 
-plaintext
-Copy code
+```plaintext
 ├── public/                  # Static files and mock data
 │   └── resources/
 │       └── dummy_data/      # Contains dummy JSON data for local testing
@@ -30,11 +41,14 @@ Copy code
 │   └── App.js               # Main React app
 ├── package.json             # Project dependencies and scripts
 └── README.md                # This file
-Dependencies
-To run the project, install the following dependencies using npm install:
+```
 
-bash
-Copy code
+---
+
+## **Dependencies**  
+Install the following dependencies using `npm install`:
+
+```bash
 ├── @emotion/react@11.13.3
 ├── @emotion/styled@11.13.0
 ├── @mui/icons-material@6.1.5
@@ -60,62 +74,76 @@ Copy code
 ├── react@18.3.1
 ├── recharts@2.14.1
 └── web-vitals@2.1.4
-Running the Project
+```
+
+---
+
+## **Running the Project**  
 Follow these steps to run the project locally:
 
-Step 1: Install Dependencies
-Run the following command to install all required dependencies:
-
-bash
-Copy code
+### **Step 1: Install Dependencies**  
+Run the following command to install all required dependencies:  
+```bash
 npm install
-Step 2: Run the Project
-To launch the application, run:
+```
 
-bash
-Copy code
+### **Step 2: Start the Application**  
+To launch the app, use:  
+```bash
 npm run dev
-concurrently will start:
-MongoDB database (ensure mongod is in your PATH).
-Express backend server.
-React frontend.
-MongoDB Setup
-If you’re running the project locally for the first time:
+```
+This will:  
+- Start the **MongoDB database**.  
+- Start the **Express backend server**.  
+- Launch the **React frontend**.
 
-Install MongoDB Community Server:
-Follow this guide to install MongoDB:
-MongoDB Local Setup Guide
+---
 
-Run MongoDB Locally:
-Ensure the mongod command is available in your system's PATH. If you don’t want to run it using concurrently, you can start MongoDB separately:
+## **MongoDB Setup**  
+If you are running the project locally:  
 
-bash
-Copy code
-mongod --dbpath ./data/db
-Add Mock Data:
-Upload the provided dummy data file from:
+1. **Install MongoDB Community Server**:  
+   Follow this guide: [MongoDB Local Setup Guide](https://www.prisma.io/dataguide/mongodb/setting-up-a-local-mongodb-database).
 
-arduino
-Copy code
-public/resources/dummy_data/dummy_data.json
-Import it into a MongoDB database named sensors.
+2. **Start MongoDB**:  
+   Ensure the `mongod` command works. If not, start MongoDB manually:  
+   ```bash
+   mongod --dbpath ./data/db
+   ```
 
-Web Application Credentials
-Use the following login credentials to access the application:
+3. **Add Mock Data**:  
+   Use the mock data provided in:  
+   ```plaintext
+   public/resources/dummy_data/dummy_data.json
+   ```
+   Import it into a MongoDB database named `sensors`.
 
-plaintext
-Copy code
+---
+
+## **Login Credentials**  
+Use the following login credentials to access the app:  
+```plaintext
 Email: demo@example.com
 Password: password123
-Links
-Pitch Video: Watch on YouTube
-Demo Video: (Link Placeholder)
-Project Server: (Link Placeholder)
-Contact
-For any questions or collaboration, reach out to the contributors:
+```
 
-William Rains
-Ishan Adhikari
-Phoenix Garcia
-Enjoy using the Heart Monitoring System! 🚀
+---
+
+## **Links**  
+
+- **Pitch Video**: [Watch on YouTube](https://www.youtube.com/watch?v=LV28VCgQyi0)  
+- **Demo Video**: *[Link Placeholder]*  
+- **Project Server**: *[Link Placeholder]*  
+
+---
+
+## **Contact**  
+For any questions or collaboration, reach out to the contributors:  
+- **William Rains**  
+- **Ishan Adhikari**  
+- **Phoenix Garcia**
+
+---
+
+**Enjoy using the Heart Monitoring System! 🚀**
 
