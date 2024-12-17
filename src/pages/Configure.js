@@ -1,28 +1,49 @@
 import React, { useEffect, useState } from "react";
-import { fetchPatient } from "../frontend";
+import { fetchDevice, fetchPatient } from "../frontend";
 
 const Configure = () => {
 
   const [devices, setDevices] = useState([]);
+  const [patient, setPatient] = useState(null);
 
   // State for selected device and its config
   const [selectedDevice, setSelectedDevice] = useState(null);
   const [samplingFrequency, setSamplingFrequency] = useState('');
-  const [startTime, setStartTime] = useState('');
-  const [endTime, setEndTime] = useState('');
+  const [startHour, setStartHour] = useState('');
+  const [startMinute, setStartMinute] = useState('');
+  const [endHour, setEndHour] = useState('');
+  const [endMinute, setEndMinute] = useState('');
 
   useEffect(() => {
-    fetchPatient(localStorage.getItem('token'));
-  }, []);
+    async function fetchData() {
+      const token = localStorage.getItem('token');
+      const patientData = await fetchPatient(token);
+      setPatient(patientData); // Set the patient data
+
+      console.log(patientData.devices);
+      if (patientData && patientData.devices) {
+        setDevices(patientData.devices); // Set devices only after patientData is fetched
+      }
+    }
+
+    fetchData(); // Call the async function
+  }, []); // Empty dependency array ensures it runs only on mount
+
+  useEffect(() => {
+    console.log("Device:", selectedDevice);
+    if(selectedDevice){
+      setSamplingFrequency(selectedDevice.frequencyMeasured);
+      setStartHour(selectedDevice.startHours);
+      setStartMinute(selectedDevice.startMinutes);
+      setEndHour(selectedDevice.endHours);
+      setEndMinute(selectedDevice.endMinutes);
+    }
+  }, [selectedDevice]);
 
   // Handle device selection
-  const handleDeviceChange = (event) => {
-    const deviceId = parseInt(event.target.value, 10);
-    const device = devices.find((dev) => dev.id === deviceId);
-    setSelectedDevice(device);
-    setSamplingFrequency(device.config.samplingFrequency);
-    setStartTime(device.config.startTime);
-    setEndTime(device.config.endTime);
+  const handleDeviceChange = async (event) => {
+    const device = await fetchDevice(event.target.value);
+  setSelectedDevice(device); // Update the state after fetching the device
   };
 
   return (
@@ -36,7 +57,7 @@ const Configure = () => {
           <option value="" disabled>Select a device</option>
           {devices.map((device) => (
             <option key={device.id} value={device.id}>
-              {device.name}
+              {device}
             </option>
           ))}
         </select>
@@ -49,7 +70,7 @@ const Configure = () => {
           {/* Sampling Frequency */}
           <div>
             <label>
-              Sampling Frequency (minutes):
+              Sampling Frequency (microseconds):
               <input
                 type="number"
                 value={samplingFrequency}
@@ -61,22 +82,41 @@ const Configure = () => {
           {/* Time Range */}
           <div>
             <label>
-              Start Time:
+              Start Hour:
               <input
-                type="time"
-                value={startTime}
-                onChange={(e) => setStartTime(e.target.value)}
+                type="number"
+                value={startHour}
+                onChange={(e) => setStartHour(e.target.value)}
+              />
+            </label>
+          </div><div>
+            <label>
+              Start Minute:
+              <input
+                type="number"
+                value={startMinute}
+                onChange={(e) => setStartMinute(e.target.value)}
               />
             </label>
           </div>
 
           <div>
             <label>
-              End Time:
+              End Hour:
               <input
-                type="time"
-                value={endTime}
-                onChange={(e) => setEndTime(e.target.value)}
+                type="number"
+                value={endHour}
+                onChange={(e) => setEndHour(e.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              End Minute:
+              <input
+                type="number"
+                value={endMinute}
+                onChange={(e) => setEndMinute(e.target.value)}
               />
             </label>
           </div>

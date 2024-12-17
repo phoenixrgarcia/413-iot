@@ -134,7 +134,7 @@ recordRoutes.route("/patients/:email").get(async function (req, res) {
         if (!patient) {
             return res.status(404).send("Patient not found");
         }
-        res.json(patient); // Send only the "devices" array
+        res.json(patient); 
     } catch (err) {
         console.error("Error fetching patient devices:", err);
         res.status(500).send("Error fetching patient devices: " + err.message);
@@ -179,6 +179,26 @@ recordRoutes.route("/devices").post(async function (req, res) {
     }
 });
 
+recordRoutes.route("/devices/:id").get(async function (req, res) {
+    try {
+        const deviceId = req.params.id; // Get the device ID from the request params
+
+        // Find the device in the database by its ID
+        const device = await Device.findOne({ deviceId: deviceId });
+
+        // If no device is found, return a 404 response
+        if (!device) {
+            return res.status(404).json({ error: "Device not found" });
+        }
+
+        // If device is found, return it as a response
+        res.status(200).json(device);
+    } catch (err) {
+        // Handle any unexpected errors
+        console.error('Error fetching device:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
 // // This section will help you get a single record by id
 // recordRoutes.route("/patients/:id").get(function (req, res) {
