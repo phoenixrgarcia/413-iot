@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Typography, TextField, Grid2 } from '@mui/material';
 import MedicalChart from '../components/MedicalChart';
-import { fetchSensorData } from '../frontend';
+import { fetchSensorData, fetchPatient } from '../frontend';
+import { DevicesFoldTwoTone } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 function Weekly() {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
@@ -9,6 +11,10 @@ function Weekly() {
   const [ avg, setAvg ] = useState(0);
   const [ min, setMin ] = useState(0);
   const [ max, setMax ] = useState(0);
+  const [devices, setDevices] = useState([]);
+  const [patient, setPatient] = useState(null);
+  const navigate = useNavigate();
+
 
   const calculateHeartRateStats = (data) => {
     if (!data || data.length === 0) {
@@ -24,10 +30,28 @@ function Weekly() {
     setMax(Math.max(...heartRates));
   };
 
+  useEffect(() => {
+    if (localStorage.getItem('token') == null){
+      navigate('/login');
+    }
+    async function fetchData() {
+        const token = localStorage.getItem('token');
+        const patientData = await fetchPatient(token);
+        setPatient(patientData); // Set the patient data
+
+        if (patientData && patientData.devices) {
+            setDevices(patientData.devices); // Set devices only after patientData is fetched
+        }
+    }
+
+    fetchData(); // Call the async function
+}, []); // Empty dependency array ensures it runs only on mount
+
 
   useEffect(() => {
     // Fetch the JSON file from the public/resources folder
-    fetchSensorData(1)//  TODO: Change to Patient ID
+
+    fetchSensorData(devices.at(0))//  TODO: Change to Patient ID
       .then((data) => {
         const date = new Date(selectedDate);
         date.setDate(date.getDate() + 1);
@@ -48,7 +72,7 @@ function Weekly() {
       .catch((error) => {
         console.error('Error loading the data:', error);
       });
-  }, []);  // Re-run when selectedDate changes
+  }, [devices, selectedDate]);  // Re-run when selectedDate changes
 
 
   return (

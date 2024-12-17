@@ -39,11 +39,11 @@ function Home() {
       <Typography variant="h1" align="center" gutterBottom>
         Welcome to Heart Monitor
       </Typography>
-      <button onClick={getRecords}>Get Records</button>
+      {/* <button onClick={getRecords}>Get Records</button>
       <button onClick={xPostPatient}>Post Test Patient</button>
       <button onClick={xPostDevice}>Post Test Device</button>
       <button onClick={testys}>Test Authentication</button>
-
+ */}
       <Typography variant="h3" gutterBottom>
         Introduction
       </Typography>

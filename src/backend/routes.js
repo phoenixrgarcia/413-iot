@@ -145,7 +145,7 @@ recordRoutes.route("/patients/:email").get(async function (req, res) {
 recordRoutes.route("/data/:id").get(async function (req, res) {
     try {
         const id = req.params.id; // Extract the :id from the route parameter
-        const sensorData = await Sensor.find({ patientID: id }, { _id: 0 });
+        const sensorData = await Sensor.find({ deviceId: id }, { _id: 0 });
         if (!sensorData) {
             return res.status(404).send("Sensor Data not found");
         }

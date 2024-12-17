@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 // Define a schema
 const sensorDataSchema = new Schema({
-    patientID: Number,
+    deviceId: String,
     oxygenLevel: Number,
     heartRate: Number,
     dateTime: Date,

@@ -97,7 +97,7 @@ export async function postDevice() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ // Change this to take a device input 
-        deviceId: "12345",
+        deviceID: "12345",
         activeRange: "01/12/2020",
         period: "1.6",
         APIKey: "WillysKey",

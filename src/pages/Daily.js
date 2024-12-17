@@ -1,17 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Typography, TextField, Grid } from '@mui/material';
 import MedicalChart from '../components/MedicalChart';
-import { fetchSensorData } from '../frontend';
+import { fetchSensorData, fetchPatient } from '../frontend';
 import { useAppContext } from '../AppContext'; // Import the context
+import { useNavigate } from 'react-router-dom';
 
 function Daily() {
+  const navigate = useNavigate();
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access context
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [dailyData, setDailyData] = useState([]);
 
+  const [devices, setDevices] = useState([]);
+  const [patient, setPatient] = useState(null);
+  
+
+  useEffect(() => {
+    if (localStorage.getItem('token') == null){
+      navigate('/login');
+    }
+    async function fetchData() {
+        const token = localStorage.getItem('token');
+        const patientData = await fetchPatient(token);
+        setPatient(patientData); // Set the patient data
+
+        if (patientData && patientData.devices) {
+            setDevices(patientData.devices); // Set devices only after patientData is fetched
+        }
+    }
+
+    fetchData(); // Call the async function
+}, []); // Empty dependency array ensures it runs only on mount
+
+
+
   useEffect(() => {
     // Fetch the JSON file from the public/resources folder
-    fetchSensorData(1)//  TODO: Change to Patient ID
+    fetchSensorData(devices.at(0))//  TODO: Change to Patient ID
       .then((data) => {
         const date = new Date(selectedDate);
         const filteredData = data.filter((entry) => {
@@ -24,7 +49,7 @@ function Daily() {
       .catch((error) => {
         console.error('Error loading the data:', error);
       });
-  }, []);
+  }, [devices, selectedDate]);
 
   // Handle date change
   const handleDateChange = (event) => {
@@ -35,8 +60,7 @@ function Daily() {
     const date = new Date(dateString);
 
     // Fetch data for the selected date from your backend or JSON file
-    fetch(`/resources/dummy_data/dummy_data.json`)
-      .then((response) => response.json())
+    fetchSensorData(devices.at(0))
       .then((data) => {
         // Filter data for the selected date (for demonstration purposes)
         const filteredData = data.filter((entry) => {
