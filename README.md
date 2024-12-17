@@ -1,7 +1,3 @@
-Here’s a clean and visually appealing **`README.md`** file for your project, properly formatted using **Markdown**. It is organized with headers, bullet points, and code formatting to make it both professional and easy to read.
-
----
-
 # 413 Heart Monitoring Project  
 **by William Rains, Ishan Adhikari, and Phoenix Garcia**
 
