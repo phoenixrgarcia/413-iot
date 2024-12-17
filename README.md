@@ -39,6 +39,81 @@ Here is the high-level structure of the project files:
 
 ---
 
+### **Authentication Endpoints**
+
+1. **`POST /auth`**  
+   - **Purpose**: Authenticate a user with their email and password.
+   - **Request**: Requires `email` and `password` in the body.  
+   - **Response**: Returns a JWT token if successful. If the email or password is incorrect, it returns a `401 Unauthorized`.
+
+2. **`GET /status`**  
+   - **Purpose**: Fetch all patient records for authenticated users.  
+   - **Request**: Requires the `X-Auth` header containing a valid JWT token.  
+   - **Response**: Returns a list of patients. If the token is invalid, returns `401 Unauthorized`.
+
+### **Patient Endpoints**
+
+3. **`POST /patients`**  
+   - **Purpose**: Add a new patient with a hashed password.  
+   - **Request**:  
+     - `email`: The patient’s email.  
+     - `password`: Plain-text password (hashed before saving).  
+     - `devices`: Optional array of device IDs.  
+   - **Response**: Returns the created patient object.
+
+4. **`GET /patients`**  
+   - **Purpose**: Fetch all patient records.  
+   - **Response**: Returns a list of all patients.
+
+5. **`GET /patients/:email`**  
+   - **Purpose**: Fetch a specific patient’s details using their email.  
+   - **Request**: Requires `X-Auth` header containing a valid JWT token.  
+   - **Response**: Returns the patient’s details if found.
+
+6. **`PUT /patients/:email`**  
+   - **Purpose**: Update a specific patient’s information.  
+   - **Request**:  
+     - Optional fields to update: `password` (hashed), `devices`.  
+   - **Response**: Returns the updated patient object. Returns `404` if the patient is not found.
+
+### **Device Endpoints**
+
+7. **`POST /devices`**  
+   - **Purpose**: Add a new device with its configuration settings.  
+   - **Request**:  
+     - `deviceId`: Unique ID for the device.  
+     - `frequencyMeasured`, `startHours`, `startMinutes`, `endHours`, `endMinutes`: Device configuration details.  
+   - **Response**: Returns the created device object.
+
+8. **`GET /devices/:id`**  
+   - **Purpose**: Fetch a specific device’s configuration using its `deviceId`.  
+   - **Request**: Device ID as a route parameter.  
+   - **Response**: Returns the device’s configuration details. If not found, returns `404`.
+
+9. **`PUT /devices/:id`**  
+   - **Purpose**: Update the configuration of a specific device.  
+   - **Request**:  
+     - Fields to update: `frequencyMeasured`, `startHours`, `startMinutes`, `endHours`, `endMinutes`.  
+   - **Response**: Returns the updated device object.
+
+### **Sensor Data Endpoints**
+
+10. **`POST /data`**  
+    - **Purpose**: Add new sensor data to the database.  
+    - **Request**:  
+      - `deviceID`: The ID of the device sending the data.  
+      - `oxygenLevel`, `heartRate`, `dateTime`: Sensor readings and timestamp.  
+    - **Response**: Returns the created sensor data object.
+
+11. **`GET /data/:id`**  
+    - **Purpose**: Fetch all sensor data for a specific device.  
+    - **Request**: Device ID as a route parameter.  
+    - **Response**: Returns all sensor data entries for the device.
+
+---
+
+
+
 ## **Dependencies**  
 To run the project, install the following dependencies using `npm install`:
 
