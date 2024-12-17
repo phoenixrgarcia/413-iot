@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery, Container, Typography, Grid2, Card, CardMedia, CardContent } from '@mui/material';
-import { fetchRecords, postPatient, postDevice } from "../frontend";
+import { fetchRecords, postPatient, postDevice, testys } from "../frontend";
 
 function Home() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access global state
@@ -42,6 +42,7 @@ function Home() {
       <button onClick={getRecords}>Get Records</button>
       <button onClick={xPostPatient}>Post Test Patient</button>
       <button onClick={xPostDevice}>Post Test Device</button>
+      <button onClick={testys}>Test Authentication</button>
 
       <Typography variant="h3" gutterBottom>
         Introduction
