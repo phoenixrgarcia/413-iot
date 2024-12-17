@@ -136,3 +136,17 @@ export async function login(email, password) {
       tokenResponse.token);
   }
 }
+
+export async function testys() { 
+    const token = localStorage.getItem("token");
+    
+    const response = await fetch("http://localhost:8080/status", {
+       headers: { "X-Auth": token }
+    });   
+ 
+    if (response.ok) {
+       const users = await response.json();
+       return users;
+    }
+ }
+ 

@@ -100,7 +100,7 @@ recordRoutes.route("/status").get(async function (req, res) {
     // X-Auth should contain the token 
     const token = req.headers["x-auth"];
     try {
-        const decoded = jwt.decode(token, secret);
+        const decoded = jwt.decode(token, secret); //use decoded to call specific things
 
         // Send back all username and status fields
         const patients = await Patient.find();
