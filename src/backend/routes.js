@@ -62,7 +62,7 @@ recordRoutes.route("/patients/:email").put(async function (req, res) {
 
         // Build update object dynamically
         const updateData = {};
-        if (req.body.password) updateData.password = req.body.password; // Note: No hashing for simplicity
+        if (req.body.password) updateData.password = await bcrypt.hash(req.body.password, salt); // Note: No hashing for simplicity
         if (req.body.devices) updateData.devices = req.body.devices;
 
         // Find patient by email and update
