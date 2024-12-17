@@ -190,21 +190,10 @@ If you’re running the project locally for the first time:
 
 ---
 
-## **Web Application Credentials**
-Use the following login credentials to access the application:  
-
-```plaintext
-Email: demo@example.com
-Password: password123
-```
-
----
-
 ## **Links**  
 
 - **Pitch Video**: [Watch on YouTube](https://www.youtube.com/watch?v=LV28VCgQyi0)  
 - **Demo Video**: (Link Placeholder)  
-- **Project Server**: (Link Placeholder)
 
 ---
 
