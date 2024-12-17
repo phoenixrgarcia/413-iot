@@ -167,4 +167,27 @@ export async function testys() {
   }
 }
 
+export async function updateDevice(deviceId, updatedData) {
+  try {
+    const response = await fetch(`http://localhost:8080/devices/${deviceId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to update device: ${response.statusText}`);
+    }
+
+    const result = await response.json();
+    console.log("Device updated successfully:", result);
+    return result;
+  } catch (error) {
+    console.error("Error updating device:", error);
+  }
+};
+
+
 

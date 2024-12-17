@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchDevice, fetchPatient } from "../frontend";
+import { fetchDevice, fetchPatient, updateDevice } from "../frontend";
 
 const Configure = () => {
 
@@ -31,7 +31,7 @@ const Configure = () => {
 
   useEffect(() => {
     console.log("Device:", selectedDevice);
-    if(selectedDevice){
+    if (selectedDevice) {
       setSamplingFrequency(selectedDevice.frequencyMeasured);
       setStartHour(selectedDevice.startHours);
       setStartMinute(selectedDevice.startMinutes);
@@ -43,8 +43,20 @@ const Configure = () => {
   // Handle device selection
   const handleDeviceChange = async (event) => {
     const device = await fetchDevice(event.target.value);
-  setSelectedDevice(device); // Update the state after fetching the device
+    setSelectedDevice(device); // Update the state after fetching the device
   };
+
+  const handleSaveDevice = async () =>{
+    const updatedData = {
+      frequencyMeasured: samplingFrequency,
+      startHours: startHour,
+      startMinutes: startMinute,
+      endHours: endHour,
+      endMinutes: endMinute,
+    };
+    
+    updateDevice(selectedDevice.deviceId, updatedData);
+  }
 
   return (
     <div style={{ padding: "20px" }}>
@@ -65,7 +77,7 @@ const Configure = () => {
 
       {selectedDevice && (
         <div style={{ marginTop: "20px" }}>
-          <h3>Configuration for {selectedDevice.name}</h3>
+          <h3>Configuration for {selectedDevice.deviceId}</h3>
 
           {/* Sampling Frequency */}
           <div>
@@ -123,7 +135,7 @@ const Configure = () => {
 
           {/* Save Button */}
           <div>
-            <button>Save Configuration</button>
+            <button onClick={handleSaveDevice}>Save Configuration</button>
             <button>Remove Device</button>
           </div>
         </div>
