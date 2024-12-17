@@ -193,7 +193,8 @@ If you’re running the project locally for the first time:
 ## **Links**  
 
 - **Pitch Video**: [Watch on YouTube](https://www.youtube.com/watch?v=LV28VCgQyi0)  
-- **Demo Video**: (Link Placeholder)  
+- **Demo Video**: [Watch on YouTube] (https://www.youtube.com/watch?v=9UlSby3FLCA)
+- **Presentation**: [Presentation Slides](https://docs.google.com/presentation/d/19n-QfEyQB0C4_8jJMQXzpxYc77wOQfeM3NRqovcAU10/edit?usp=sharing) 
 
 ---
 
