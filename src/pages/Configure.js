@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchDevice, fetchPatient, updatePatient } from "../frontend";
+import { fetchDevice, fetchPatient, updatePatient, updateDevice } from "../frontend";
 
 const Configure = () => {
 
@@ -53,7 +53,7 @@ const Configure = () => {
 
   useEffect(() => {
     console.log("Device:", selectedDevice);
-    if(selectedDevice){
+    if (selectedDevice) {
       setSamplingFrequency(selectedDevice.frequencyMeasured);
       setStartHour(selectedDevice.startHours);
       setStartMinute(selectedDevice.startMinutes);
@@ -65,8 +65,32 @@ const Configure = () => {
   // Handle device selection
   const handleDeviceChange = async (event) => {
     const device = await fetchDevice(event.target.value);
-  setSelectedDevice(device); // Update the state after fetching the device
+    setSelectedDevice(device); // Update the state after fetching the device
   };
+
+  const handleSaveDevice = async () =>{
+    const updatedData = {
+      frequencyMeasured: samplingFrequency,
+      startHours: startHour,
+      startMinutes: startMinute,
+      endHours: endHour,
+      endMinutes: endMinute,
+    };
+    
+    updateDevice(selectedDevice.deviceId, updatedData);
+  }
+  
+  const handleAddDevice = async () =>{
+    // const updatedData = {
+    //   frequencyMeasured: samplingFrequency,
+    //   startHours: startHour,
+    //   startMinutes: startMinute,
+    //   endHours: endHour,
+    //   endMinutes: endMinute,
+    // };
+    
+    // updateDevice(selectedDevice.deviceId, updatedData);
+  }
 
   return (
     <div style={{ padding: "20px" }}>
@@ -87,7 +111,7 @@ const Configure = () => {
 
       {selectedDevice && (
         <div style={{ marginTop: "20px" }}>
-          <h3>Configuration for {selectedDevice.name}</h3>
+          <h3>Configuration for {selectedDevice.deviceId}</h3>
 
           {/* Sampling Frequency */}
           <div>
@@ -145,7 +169,7 @@ const Configure = () => {
 
           {/* Save Button */}
           <div>
-            <button>Save Configuration</button>
+            <button onClick={handleSaveDevice}>Save Configuration</button>
             <button>Remove Device</button>
           </div>
         </div>
@@ -164,7 +188,7 @@ const Configure = () => {
 
       {/* Add Device Button */}
       <div>
-        <button>Add Device</button>
+        <button onClick={handleAddDevice}>Add Device</button>
       </div>
 
       <h3>Account Configuration</h3>

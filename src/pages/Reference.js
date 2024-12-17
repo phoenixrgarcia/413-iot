@@ -22,9 +22,9 @@ const ReferencePage = () => {
             <ListItemText
               primary="Github"
               secondary={
-                <a 
-                  href="https://github.com/phoenixrgarcia/413-iot.git" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/phoenixrgarcia/413-iot.git"
+                  target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'inherit' }}
                 >
@@ -33,7 +33,7 @@ const ReferencePage = () => {
               }
             />
           </ListItem>
-          
+
         </List>
       </Box>
 
@@ -77,6 +77,13 @@ const ReferencePage = () => {
               secondary="A collection of utilities for array manipulation and statistical calculations, commonly used in data visualization projects."
             />
           </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="React Router DOM"
+              secondary="A routing library for React applications that enables navigation between views, URL parameter handling, and dynamic routing."
+            />
+          </ListItem>
+
         </List>
       </Box>
 
@@ -100,6 +107,24 @@ const ReferencePage = () => {
             <ListItemText
               primary="Express"
               secondary="A web application framework for Node.js, designed for building APIs and web applications. It simplifies server-side development by providing middleware and routing features."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="CORS"
+              secondary="Cross-Origin Resource Sharing (CORS) is a security feature that allows or restricts resources on a web server to be accessed by requests from different origins."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="JWT (JSON Web Token)"
+              secondary="A compact and self-contained way of securely transmitting information between parties as a JSON object, commonly used for authentication and information exchange."
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary="bcrypt"
+              secondary="A library for hashing passwords securely using the bcrypt algorithm, adding salt to protect against brute-force attacks and rainbow table attacks."
             />
           </ListItem>
         </List>
