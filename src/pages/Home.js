@@ -4,7 +4,7 @@ import { useAppContext } from '../AppContext'; // Import the context
 import { useMediaQuery, Container, Typography, Grid2, Card, CardMedia, CardContent } from '@mui/material';
 import { fetchRecords, postPatient, postDevice, testys } from "../frontend";
 
-function Home() {
+async function Home() {
   const { isLoggedIn, setIsLoggedIn } = useAppContext(); // Access global state
   const isMobile = useMediaQuery('(max-width:768px)'); // Check for mobile view
 
@@ -32,6 +32,19 @@ function Home() {
       const data = await postDevice();
       console.log(data);
     }
+
+
+    const response = await fetch("http://localhost:8080/auth", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+      credentials: "include", // Sends cookies with the request
+    });
 
 
   return (
