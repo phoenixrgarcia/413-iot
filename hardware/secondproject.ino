@@ -42,10 +42,10 @@ int validReadingsCount = 0;
 bool bufferInitialized = false; // Tracks if the buffer setup has been done for this cycle
 
 int frequencyMeasured = 1800000; // Default time to wait between measurements is 30 minutes
-int startHours = 0; // Default start time is 6am
+int startHours = 6; // Default start time is 6am
 int startMinutes = 0;
 
-int endHours = 24; // Default end time is 10pm
+int endHours = 22; // Default end time is 10pm
 int endMinutes = 0;
 
 const int EEPROM_START_ADDR = 0;  // EEPROM address for stored data
@@ -112,6 +112,7 @@ void loop() {
         for (byte i = 0; i < bufferLength; i++) {
           while (particleSensor.available() == false) // Wait for new data
             particleSensor.check(); // Check the sensor for new data
+          
           digitalWrite(LED, !digitalRead(LED)); //Blink onboard LED with every data read
           RGB.color(0,0,255); // Blink the LED color blue 
           redBuffer[i] = particleSensor.getRed();
