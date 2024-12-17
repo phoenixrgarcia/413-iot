@@ -129,12 +129,12 @@ recordRoutes.route("/patients/:email").get(async function (req, res) {
     try {
         const decoded = jwt.decode(token, secret);
         const email = decoded.email;
-        
+
         const patient = await Patient.findOne({ email: email }, { _id: 0 });
         if (!patient) {
             return res.status(404).send("Patient not found");
         }
-        res.json(patient); 
+        res.json(patient);
     } catch (err) {
         console.error("Error fetching patient devices:", err);
         res.status(500).send("Error fetching patient devices: " + err.message);
@@ -202,32 +202,58 @@ recordRoutes.route("/devices/:id").get(async function (req, res) {
 
 recordRoutes.route("/devices/:id").put(async function (req, res) {
     try {
-      const deviceId = req.params.id;
-  
-      // Find the device and update it with new data
-      const updatedDevice = await Device.findOneAndUpdate(
-        { deviceId: deviceId },  // Filter by deviceId
-        {
-          frequencyMeasured: req.body.frequencyMeasured,
-          startHours: req.body.startHours,
-          startMinutes: req.body.startMinutes,
-          endHours: req.body.endHours,
-          endMinutes: req.body.endMinutes,
-        },
-        { new: true, runValidators: true } // Return updated document
-      );
-  
-      if (!updatedDevice) {
-        return res.status(404).json({ error: "Device not found" });
-      }
-  
-      res.status(200).json(updatedDevice);  // Send the updated device back
+        const deviceId = req.params.id;
+
+        // Find the device and update it with new data
+        const updatedDevice = await Device.findOneAndUpdate(
+            { deviceId: deviceId },  // Filter by deviceId
+            {
+                frequencyMeasured: req.body.frequencyMeasured,
+                startHours: req.body.startHours,
+                startMinutes: req.body.startMinutes,
+                endHours: req.body.endHours,
+                endMinutes: req.body.endMinutes,
+            },
+            { new: true, runValidators: true } // Return updated document
+        );
+
+        if (!updatedDevice) {
+            return res.status(404).json({ error: "Device not found" });
+        }
+
+        res.status(200).json(updatedDevice);  // Send the updated device back
     } catch (err) {
-      console.error("Error updating device:", err);
-      res.status(500).send("Error updating device: " + err.message);
+        console.error("Error updating device:", err);
+        res.status(500).send("Error updating device: " + err.message);
     }
-  });
-  
+});
+
+recordRoutes.route("/data").post(async function (req, res) {
+    try {
+        const { deviceID, oxygenLevel, heartRate, dateTime } = req.body;
+
+        // Validate the incoming data
+        if (!deviceID || !oxygenLevel || !heartRate || !dateTime) {
+            return res.status(400).json({ error: "All fields are required" });
+        }
+
+        // Create a new sensor record
+        const newSensorData = new Sensor({
+            deviceID,
+            oxygenLevel,
+            heartRate,
+            dateTime: new Date(dateTime),
+        });
+
+        // Save the record to the database
+        const savedData = await newSensorData.save();
+        res.status(201).json(savedData);
+    } catch (err) {
+        console.error("Error saving sensor data:", err);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 
 // // This section will help you get a single record by id
 // recordRoutes.route("/patients/:id").get(function (req, res) {
