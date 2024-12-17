@@ -24,12 +24,14 @@ Here is the high-level structure of the project files:
 │       └── dummy_data/      # Contains dummy JSON data for local testing
 ├── src/
 │   ├── backend/             # Backend files
-│   │   ├── server.js        # Express server
+│   │   ├── db/
+|   |   |   ├── db.js        # Database Connection File
 │   │   ├── models/          # Mongoose schemas
-│   │   └── routes/          # API routes
-│   ├── frontend/            # Frontend utilities and API calls
-│   ├── components/          # React components
-│   ├── pages/               # Application pages
+│   │   ├── routes.js        # API routes for our express backend
+|   |   └── server.js        # Launches our server
+│   ├── components/          # React components we reuse for modularity
+│   ├── pages/               # Different pages used in our application
+│   ├── frontend.js/         # Fetch requests to backend endpoints.
 │   └── App.js               # Main React app
 ├── package.json             # Project dependencies and scripts
 └── README.md                # This file
