@@ -14,7 +14,7 @@ function Login() {
     event.preventDefault();
     // Add token authentication, password salting, and encryption logic here
     
-    login(email, password)
+    login(email, password);
     // Call your MongoDB API endpoint here
   };
 

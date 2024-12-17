@@ -76,12 +76,11 @@ recordRoutes.route("/auth").post(async function (req, res) {
             return res.status(401).json({ error: "Bad password" });
         }
 
-        // Proceed with authentication
-        res.status(200).json({ message: "Authentication successful" });
-
         // Generate a token containing the patient's email
-        const token = jwt.sign({ email: patient.email }, secret, { expiresIn: '1h' }); // Optional: set an expiration time for the token
+        const token = jwt.encode({ email: patient.email }, secret);
         res.json({ token: token });
+        return;
+
 
     } catch (err) {
         console.error("Error during authentication:", err);
