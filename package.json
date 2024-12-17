@@ -34,7 +34,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "nodemon src/backend/server.js",
-    "dev": "concurrently \"npm run start\" \"npm run server\""
+    "start:mongo": "mongod",
+    "dev": "concurrently \"npm run start:mongo\" \"npm run start\" \"npm run server\""
   },
   "eslintConfig": {
     "extends": [
