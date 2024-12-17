@@ -89,19 +89,14 @@ export async function postPatient(email, password, deviceID) {
 }
 
 
-export async function postDevice() {
+export async function postDevice(updatedData) {
   try {
     const response = await fetch("http://localhost:8080/devices", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ // Change this to take a device input 
-        deviceID: "12345",
-        activeRange: "01/12/2020",
-        period: "1.6",
-        APIKey: "WillysKey",
-      }),
+      body: JSON.stringify(updatedData),
 
     });
 

@@ -198,9 +198,11 @@ recordRoutes.route("/devices").post(async function (req, res) {
     try {
         const newDevice = new Device({
             deviceId: req.body.deviceId,
-            activeRange: req.body.activeRange,
-            period: req.body.period,
-            APIKey: req.body.apiKey,
+            frequencyMeasured: req.body.frequencyMeasured,
+            startHours: req.body.startHours,
+            startMinutes: req.body.startMinutes,
+            endHours: req.body.endHours,
+            endMinutes: req.body.endMinutes,
         });
 
         // Save the new patient document to the database

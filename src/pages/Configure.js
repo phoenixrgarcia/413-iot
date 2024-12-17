@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchDevice, fetchPatient, updatePatient, updateDevice } from "../frontend";
+import { fetchDevice, fetchPatient, updatePatient, updateDevice, postDevice } from "../frontend";
 
 const Configure = () => {
 
@@ -14,6 +14,7 @@ const Configure = () => {
   const [endHour, setEndHour] = useState('');
   const [endMinute, setEndMinute] = useState('');
   const [newPassword, setNewPassword] = useState('');
+  const [newDeviceId, setNewDeviceId] = useState("");
 
 
   const handleSavePassword = async () => {
@@ -80,17 +81,45 @@ const Configure = () => {
     updateDevice(selectedDevice.deviceId, updatedData);
   }
   
-  const handleAddDevice = async () =>{
-    // const updatedData = {
-    //   frequencyMeasured: samplingFrequency,
-    //   startHours: startHour,
-    //   startMinutes: startMinute,
-    //   endHours: endHour,
-    //   endMinutes: endMinute,
-    // };
+  const handleAddDevice = async () => {
+    try {
+      if (!patient) {
+        console.error("No patient data available.");
+        alert("Patient data is not available.");
+        return;
+      }
     
-    // updateDevice(selectedDevice.deviceId, updatedData);
-  }
+      // Create a new device with default values
+      const newDeviceData = {
+        deviceId: newDeviceId,
+        frequencyMeasured: "1800000000", // Default frequency in microseconds
+        startHours: "6",
+        startMinutes: "0",
+        endHours: "22",
+        endMinutes: "0",
+      };
+  
+      // Call the function to add the device to the database
+      await postDevice(newDeviceData); // Assuming updateDevice handles adding new devices
+  
+      // Update the patient's devices array to include the new device ID
+      const updatedPatientData = {
+        devices: [...patient.devices, newDeviceId], // Add new device ID to the existing devices
+      };
+  
+      const updatedPatient = await updatePatient(patient.email, updatedPatientData);
+  
+      // Update local state to reflect the changes
+      setDevices(updatedPatient.devices);
+      setPatient(updatedPatient);
+  
+      alert("Device added successfully!");
+    } catch (error) {
+      console.error("Error adding new device:", error);
+      alert("Failed to add new device.");
+    }
+  };
+    
 
   return (
     <div style={{ padding: "20px" }}>
@@ -179,12 +208,16 @@ const Configure = () => {
       <h3 style={{ marginTop: "20px" }}>Add New Device</h3>
 
       {/* New Device ID */}
-      <div>
-        <label>
-          New Device ID:
-          <input type="text" />
-        </label>
-      </div>
+          <div>
+      <label>
+        New Device ID:
+        <input
+          type="text"
+          value={newDeviceId} // Bind input value to state
+          onChange={(e) => setNewDeviceId(e.target.value)} // Update state on change
+        />
+      </label>
+    </div>
 
       {/* Add Device Button */}
       <div>
