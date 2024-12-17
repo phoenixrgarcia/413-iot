@@ -53,9 +53,9 @@ function Heading() {
               onClose={handleMenuClose}
             >
               <MenuItem component={Link} to="/" onClick={handleMenuClose}>Home</MenuItem>
-              <MenuItem component={Link} to="/configure" onClick={handleMenuClose}>Configure</MenuItem>
-              <MenuItem component={Link} to="/daily" onClick={handleMenuClose}>Daily</MenuItem>
-              <MenuItem component={Link} to="/weekly" onClick={handleMenuClose}>Weekly</MenuItem>
+              <MenuItem component={Link} to={isLoggedIn? "/configure" : "/login"} onClick={handleMenuClose}>Configure</MenuItem>
+              <MenuItem component={Link} to={isLoggedIn? "/daily" : "/login"} onClick={handleMenuClose}>Daily</MenuItem>
+              <MenuItem component={Link} to={isLoggedIn? "/weekly" : "login"} onClick={handleMenuClose}>Weekly</MenuItem>
               <MenuItem component={Link} to="/reference" onClick={handleMenuClose}>Reference</MenuItem>
             </Menu>
           </>
