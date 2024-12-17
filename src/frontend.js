@@ -65,7 +65,7 @@ export async function fetchRecords() {
   }
   
 
-  export async function postPatient() {
+  export async function postPatient(email, password, deviceID) {
     try {
       const response = await fetch("http://localhost:8080/patients", {
         method: "POST",
@@ -73,11 +73,17 @@ export async function fetchRecords() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ // Change this to take a patient input 
+<<<<<<< HEAD
             patientID: "12345",
             email: "test@example.com",
             password: "password123",
             status: "Test",
             devices: ["Hello", "Will"],
+=======
+            email: email,
+            password: password,
+            devices: deviceID,
+>>>>>>> b323c6590b099042847ff27a8d4131498152ead4
           }),
   
       });

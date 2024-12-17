@@ -5,6 +5,7 @@ const connectToDB = require('./db/db');
 const Patient = require("./models/patientsSchema");
 const Device = require("./models/devicesSchema");
 const Sensor = require("./models/sensorDataSchema");
+const bcrypt = require('bcrypt');
 
 
 //My thoughts, I think I set it up in a fucked up way?? I think instead of doing .route(/...)
@@ -12,17 +13,17 @@ const Sensor = require("./models/sensorDataSchema");
 //CRUD operations. For example, there would be patients.js in this folder where I can then
 //define the CRUD operations much easier while also keeping it modularized.
 //https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get
- 
+
 //MongoDB automatically adds ID section to all documents
 
 // This helps convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
- 
+
 (async () => {
     const mongooseConnection = await connectToDB();
     db_connect = mongooseConnection.db; // Access the native MongoDB database object
-  })();
-  
+})();
+
 
 //Authentication
 
@@ -31,6 +32,11 @@ const secret = "supersecret";
 // Post new information to the database.
 recordRoutes.route("/patients").post(async function (req, res) {
     try {
+        // Generate a salt and hash the password
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+        // Create a new patient with the hashed password
         // Check for email and password
         if (!req.body.email || !req.body.password) {
             res.status(400).json({ error: "Missing email and/or password"});
@@ -38,8 +44,9 @@ recordRoutes.route("/patients").post(async function (req, res) {
          }
       
         const newPatient = new Patient({
-            patientID: req.body.patientID,
             email: req.body.email,
+            password: hashedPassword,  // Store the hashed password
+            devices: req.body.devices || [],  // Default to an empty array if devices are not provided
             password: req.body.password,    
             devices: req.body.devices || [], // Default to an empty array if devices is not provided
         });
@@ -117,10 +124,10 @@ recordRoutes.route("/patients").get(async function (req, res) {
         // Fetch all patients using the Mongoose model
         const patients = await Patient.find();
         res.json(patients);
-      } catch (err) {
+    } catch (err) {
         console.error("Error fetching records:", err);
         res.status(500).send("Error fetching records: " + err.message);
-      }
+    }
 });
 
 // GET route to fetch devices for a specific patient by ID
@@ -142,7 +149,7 @@ recordRoutes.route("/patients/:id").get(async function (req, res) {
 recordRoutes.route("/data/:id").get(async function (req, res) {
     try {
         const id = req.params.id; // Extract the :id from the route parameter
-        const sensorData = await Sensor.find({ patientID: id }, {_id: 0});
+        const sensorData = await Sensor.find({ patientID: id }, { _id: 0 });
         if (!sensorData) {
             return res.status(404).send("Sensor Data not found");
         }
@@ -162,7 +169,7 @@ recordRoutes.route("/devices").post(async function (req, res) {
         const newDevice = new Device({
             deviceId: req.body.deviceId,
             activeRange: req.body.activeRange,
-            period: req.body.period,        
+            period: req.body.period,
             APIKey: req.body.apiKey,
         });
 
@@ -176,7 +183,7 @@ recordRoutes.route("/devices").post(async function (req, res) {
     }
 });
 
- 
+
 // // This section will help you get a single record by id
 // recordRoutes.route("/patients/:id").get(function (req, res) {
 //  let myquery = { _id: ObjectId(req.params.id) };
@@ -187,7 +194,7 @@ recordRoutes.route("/devices").post(async function (req, res) {
 //      res.json(result);
 //    });
 // });
- 
+
 // This section will help you create a new record.
 // recordRoutes.route("/record/add").post(function (req, response) {
 //  let myobj = {
@@ -200,7 +207,7 @@ recordRoutes.route("/devices").post(async function (req, res) {
 //    response.json(res);
 //  });
 // });
- 
+
 // // This section will help you update a record by id.
 // recordRoutes.route("/update/:id").post(function (req, response) {
 //  let myquery = { _id: ObjectId(req.params.id) };
@@ -219,7 +226,7 @@ recordRoutes.route("/devices").post(async function (req, res) {
 //      response.json(res);
 //    });
 // });
- 
+
 // // This section will help you delete a record
 // recordRoutes.route("/:id").delete((req, response) => {
 //  let myquery = { _id: ObjectId(req.params.id) };
@@ -229,5 +236,5 @@ recordRoutes.route("/devices").post(async function (req, res) {
 //    response.json(obj);
 //  });
 // });
- 
+
 module.exports = recordRoutes;

@@ -1,11 +1,12 @@
 // src/pages/CreateAccount.js
 import React, { useState } from 'react';
 import { Container, Typography, Box, TextField, Button, Alert } from '@mui/material';
+import { postPatient } from '../frontend';
 
 function CreateAccount() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [deviceId, setDeviceId] = useState('');
+  const [deviceId, setDeviceId] = useState('e00fce6864f6e494fa2ca50f');
   const [error, setError] = useState('');
 
   const handleSubmit = (event) => {
@@ -17,11 +18,12 @@ function CreateAccount() {
       return;
     }
 
-    // Handle account creation logic (validation, API call)
-    console.log('Creating Account');
-    console.log('Email:', email);
-    console.log('Password:', password);
+    postPatient(email, password, deviceId);
   };
+
+  const handleCreatePatient = () => {
+
+  }
 
   const isStrongPassword = (password) => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
@@ -75,6 +77,7 @@ function CreateAccount() {
           value={deviceId}
           onChange={(e) => setDeviceId(e.target.value)}
           required
+          defaultValue={"e00fce6864f6e494fa2ca50f"}
         />
         <Button
           type="submit"
