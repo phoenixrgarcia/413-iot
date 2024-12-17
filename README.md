@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+413 Heart Monitoring Project
+by William Rains, Ishan Adhikari, and Phoenix Garcia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Overview
+The goal of this project was to create a fully functional Heart Monitoring System. Users can measure their heart rate and blood oxygen saturation using a physical device. The recorded data is sent to the Particle platform, which then triggers a webhook to send data to our MongoDB backend. The backend, built using Express, exposes multiple endpoints to interact with the data.
 
-## Available Scripts
+The project includes a user-friendly web application built using Node.js and React. Users can:
 
-In the project directory, you can run:
+Sign in securely.
+Access daily and weekly data.
+Configure settings for their Particle device.
+Add new devices.
+Update their password.
+File Hierarchy
+Here is the high-level structure of the project files:
 
-### `npm start`
+plaintext
+Copy code
+├── public/                  # Static files and mock data
+│   └── resources/
+│       └── dummy_data/      # Contains dummy JSON data for local testing
+├── src/
+│   ├── backend/             # Backend files
+│   │   ├── server.js        # Express server
+│   │   ├── models/          # Mongoose schemas
+│   │   └── routes/          # API routes
+│   ├── frontend/            # Frontend utilities and API calls
+│   ├── components/          # React components
+│   ├── pages/               # Application pages
+│   └── App.js               # Main React app
+├── package.json             # Project dependencies and scripts
+└── README.md                # This file
+Dependencies
+To run the project, install the following dependencies using npm install:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+├── @emotion/react@11.13.3
+├── @emotion/styled@11.13.0
+├── @mui/icons-material@6.1.5
+├── @mui/lab@6.0.0-beta.17
+├── @mui/material@6.1.9
+├── @mui/x-date-pickers@7.23.0
+├── @testing-library/jest-dom@5.17.0
+├── @testing-library/react@13.4.0
+├── @testing-library/user-event@13.5.0
+├── bcrypt@5.1.1
+├── concurrently@9.1.0
+├── cors@2.8.5
+├── d3-array@3.2.4
+├── date-fns@4.1.0
+├── express@4.21.1
+├── jwt-simple@0.5.6
+├── mongoose@8.8.3
+├── mongosh@2.3.3
+├── nodemon@3.1.7
+├── react-dom@18.3.1
+├── react-router-dom@6.27.0
+├── react-scripts@5.0.1
+├── react@18.3.1
+├── recharts@2.14.1
+└── web-vitals@2.1.4
+Running the Project
+Follow these steps to run the project locally:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Step 1: Install Dependencies
+Run the following command to install all required dependencies:
 
-### `npm test`
+bash
+Copy code
+npm install
+Step 2: Run the Project
+To launch the application, run:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm run dev
+concurrently will start:
+MongoDB database (ensure mongod is in your PATH).
+Express backend server.
+React frontend.
+MongoDB Setup
+If you’re running the project locally for the first time:
 
-### `npm run build`
+Install MongoDB Community Server:
+Follow this guide to install MongoDB:
+MongoDB Local Setup Guide
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run MongoDB Locally:
+Ensure the mongod command is available in your system's PATH. If you don’t want to run it using concurrently, you can start MongoDB separately:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+mongod --dbpath ./data/db
+Add Mock Data:
+Upload the provided dummy data file from:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+arduino
+Copy code
+public/resources/dummy_data/dummy_data.json
+Import it into a MongoDB database named sensors.
 
-### `npm run eject`
+Web Application Credentials
+Use the following login credentials to access the application:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+plaintext
+Copy code
+Email: demo@example.com
+Password: password123
+Links
+Pitch Video: Watch on YouTube
+Demo Video: (Link Placeholder)
+Project Server: (Link Placeholder)
+Contact
+For any questions or collaboration, reach out to the contributors:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+William Rains
+Ishan Adhikari
+Phoenix Garcia
+Enjoy using the Heart Monitoring System! 🚀
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
