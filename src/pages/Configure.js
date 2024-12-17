@@ -57,6 +57,18 @@ const Configure = () => {
     
     updateDevice(selectedDevice.deviceId, updatedData);
   }
+  
+  const handleAddDevice = async () =>{
+    // const updatedData = {
+    //   frequencyMeasured: samplingFrequency,
+    //   startHours: startHour,
+    //   startMinutes: startMinute,
+    //   endHours: endHour,
+    //   endMinutes: endMinute,
+    // };
+    
+    // updateDevice(selectedDevice.deviceId, updatedData);
+  }
 
   return (
     <div style={{ padding: "20px" }}>
@@ -154,7 +166,7 @@ const Configure = () => {
 
       {/* Add Device Button */}
       <div>
-        <button>Add Device</button>
+        <button onClick={handleAddDevice}>Add Device</button>
       </div>
 
       <h3>Account Configuration</h3>
