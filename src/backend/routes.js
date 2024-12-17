@@ -7,15 +7,6 @@ const Device = require("./models/devicesSchema");
 const Sensor = require("./models/sensorDataSchema");
 const bcrypt = require('bcrypt');
 
-
-//My thoughts, I think I set it up in a fucked up way?? I think instead of doing .route(/...)
-//you are supposed to have a routes folder and multiple files in that folder for
-//CRUD operations. For example, there would be patients.js in this folder where I can then
-//define the CRUD operations much easier while also keeping it modularized.
-//https://stackoverflow.com/questions/28305120/differences-between-express-router-and-app-get
-
-//MongoDB automatically adds ID section to all documents
-
 // This helps convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
 
@@ -127,14 +118,23 @@ recordRoutes.route("/patients").get(async function (req, res) {
 });
 
 // GET route to fetch devices for a specific patient by ID
-recordRoutes.route("/patients/:id").get(async function (req, res) {
+recordRoutes.route("/patients/:email").get(async function (req, res) {
+    // See if the X-Auth header is set
+    if (!req.headers["x-auth"]) {
+        return res.status(401).json({ error: "Missing X-Auth header" });
+    }
+    // X-Auth should contain the token 
+    const token = req.headers["x-auth"];
+
     try {
-        const id = req.params.id; // Extract the :id from the route parameter
-        const patient = await Patient.findById(id, { devices: 1, _id: 0 });
+        const decoded = jwt.decode(token, secret);
+        const email = decoded.email;
+        
+        const patient = await Patient.findOne({ email: email }, { _id: 0 });
         if (!patient) {
             return res.status(404).send("Patient not found");
         }
-        res.json(patient.devices); // Send only the "devices" array
+        res.json(patient); // Send only the "devices" array
     } catch (err) {
         console.error("Error fetching patient devices:", err);
         res.status(500).send("Error fetching patient devices: " + err.message);

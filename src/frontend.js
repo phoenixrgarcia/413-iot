@@ -22,13 +22,11 @@ export async function fetchRecords() {
   }
 }
 
-export async function fetchSingleRecord(id) {
+export async function fetchPatient(token) {
   try {
-    const response = await fetch(`http://localhost:8080/patients/${id}`, {
+    const response = await fetch(`http://localhost:8080/patients/${token}`, {
       method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "X-Auth": token }
     });
 
     if (!response.ok) {
@@ -128,7 +126,7 @@ export async function login(email, password) {
       password: password,
     })
   });
-  
+
 
   if (response.ok) {
     const tokenResponse = await response.json();
@@ -137,16 +135,17 @@ export async function login(email, password) {
   }
 }
 
-export async function testys() { 
-    const token = localStorage.getItem("token");
-    
-    const response = await fetch("http://localhost:8080/status", {
-       headers: { "X-Auth": token }
-    });   
- 
-    if (response.ok) {
-       const users = await response.json();
-       return users;
-    }
- }
- 
+export async function testys() {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch("http://localhost:8080/status", {
+    headers: { "X-Auth": token }
+  });
+
+  if (response.ok) {
+    const users = await response.json();
+    return users;
+  }
+}
+
+

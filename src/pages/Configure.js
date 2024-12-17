@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { fetchPatient } from "../frontend";
 
 const Configure = () => {
-  // Fake device data
-  const devices = [
-    { id: 1, name: "Device 1", config: { samplingFrequency: 10, startTime: "08:00", endTime: "18:00" } },
-    { id: 2, name: "Device 2", config: { samplingFrequency: 15, startTime: "07:00", endTime: "17:00" } },
-    { id: 3, name: "Device 3", config: { samplingFrequency: 20, startTime: "06:00", endTime: "16:00" } }
-  ];
+
+  const [devices, setDevices] = useState([]);
 
   // State for selected device and its config
   const [selectedDevice, setSelectedDevice] = useState(null);
   const [samplingFrequency, setSamplingFrequency] = useState('');
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
+
+  useEffect(() => {
+    fetchPatient(localStorage.getItem('token'));
+  }, []);
 
   // Handle device selection
   const handleDeviceChange = (event) => {
